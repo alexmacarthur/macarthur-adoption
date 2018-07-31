@@ -1,0 +1,33 @@
+{
+  "name": "adoption-",
+  "version": "0.0.0",
+  "license": "GPL-2.0",
+  "author": "Alex MacArthur <alex@macarthur.me>",
+  "description": "Our adoption website.",
+  "scripts": {
+    "lambda-serve": "netlify-lambda serve lambda-src",
+    "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "minify": "html-minifier --input-dir ./_site --output-dir ./_site --collapse-whitespace --file-ext html",
+    "critical": "node critical.js",
+    "build": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && jekyll build && npm run minify && npm run critical",
+    "jekyll": "concurrently --kill-others \"yarn run watch\" \"jekyll serve\""
+  },
+  "devDependencies": {
+    "babili-webpack-plugin": "^0.1.2",
+    "browser-sync": "^2.18.13",
+    "browser-sync-webpack-plugin": "^1.2.0",
+    "concurrently": "^3.5.0",
+    "critical": "^1.1.0",
+    "html-minifier": "^3.5.7",
+    "laravel-mix": "^1.6.1"
+  },
+  "dependencies": {
+    "intersection-observer": "^0.5.0",
+    "jump.js": "^1.0.2",
+    "lozad": "^1.6.0",
+    "normalize.css": "^8.0.0",
+    "stripe": "^5.4.0",
+    "typeit": "^5.10.2"
+  }
+}

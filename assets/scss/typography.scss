@@ -1,0 +1,68 @@
+html,
+body {
+  font-size: 62.5%;
+  height: 100%;
+  text-align: center;
+  color: $gray;
+  font-family: $sans-serif-font-family;
+}
+
+p,
+a,
+span,
+th,
+td,
+li {
+  margin: 0 0 3px;
+  line-height: 1.35;
+  font-size: $regular-font-size;
+  font-weight: 300;
+}
+
+a {
+  color: $purple;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover {
+    color: $purple--dark;
+  }
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $serif-font-family;
+  font-weight: 700;
+  margin: 2rem 0 1.5rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: $large-font-size;
+}
+
+h2 {
+  font-size: $medium-font-size;
+}
+
+h3 {
+  font-size: 2rem;
+  font-family: $sans-serif-font-family;
+}
+
+h4 {
+  font-size: 1.75rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}

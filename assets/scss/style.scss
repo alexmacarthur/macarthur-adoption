@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  transition: opacity .15s ease-in-out;
+  max-width: 100%;
+  opacity: 0;
+
+  &.is-loaded {
+    opacity: 1;
+  }
+}
+
+@import 'mixins';
+@import 'variables';
+@import 'typography';
+@import 'components/Button';
+@import 'components/Hero';
+@import 'components/Section';
+@import 'components/Footer';

@@ -1,0 +1,14 @@
+.Footer {
+  background: $purple;
+  margin-top: 8rem;
+  text-align: center;
+  padding: 2rem;
+
+  &-link {
+    color: $white;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}

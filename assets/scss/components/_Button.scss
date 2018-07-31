@@ -1,0 +1,14 @@
+.Button {
+  background: $purple;
+  border: 2px solid $purple;
+  color: $white;
+  padding: 1rem 2rem;
+  border-radius: $border-radius;
+  display: inline-block;
+
+  &:hover {
+    background: none;
+    color: $purple--dark;
+    border-color: $purple--dark;
+  }
+}

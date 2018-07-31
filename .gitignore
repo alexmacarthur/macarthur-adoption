@@ -1,0 +1,13 @@
+node_modules
+.sass-cache
+.DS_store*
+npm-debug.log
+_site
+.jekyll-metadata
+lambda/*
+.env
+
+# Compiled Assets
+scripts.min.js
+style.min.css
+

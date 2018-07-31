@@ -1,0 +1,23 @@
+$white: #ffffff;
+$gray: #373836;
+$gray--light: lighten($gray, 10%);
+$purple: #9A94BC;
+$purple--dark: darken($purple, 10%);
+
+$border-radius: 25px;
+
+$giant-font-size: 9rem;
+$large-font-size: 5rem;
+$medium-font-size: 3.5rem;
+$regular-font-size: 1.8rem;
+$small-font-size: 1.25rem;
+
+$large: 1200px;
+$medium: 1024px;
+$small: 992px;
+$tablet: 768px;
+$mobile: 600px;
+$tiny: 400px;
+
+$serif-font-family: 'Playfair Display', serif;
+$sans-serif-font-family: 'Montserrat', sans-serif;

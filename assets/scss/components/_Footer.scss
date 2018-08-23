@@ -2,10 +2,11 @@
   background: $purple;
   margin-top: 8rem;
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
 
   &-link {
     color: $white;
+    font-weight: normal;
 
     &:hover {
       color: $white;

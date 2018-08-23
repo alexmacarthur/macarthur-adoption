@@ -33,6 +33,5 @@ mix.options({
  */
 
 mix
-  .copy('_headers', '_site/_headers')
   .js('assets/js/scripts.js', 'assets/js/scripts.min.js')
   .sass('assets/scss/style.scss', 'assets/css/style.min.css');

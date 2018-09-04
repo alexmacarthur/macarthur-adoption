@@ -1,5 +1,9 @@
-For as long as Hannah & I have been married (in fact, probably even before that), we've felt a holy pressure within us to _eventually_ adopt. We had vague ideas of what that actually meant in terms of location, finances, age of children, and everything else, but the desire was undeniable, and as we began to grow our family (we currently have two little girls -- Autumn & Pippa), this desire grew into a determination stronger than ever.
+We're Alex and Hannah MacArthur, a couple of Minnesota-to-Tennesee transplants with two of the sweetest little girls, Autumn (3) & Pippa (2).
 
-Six years and two kids later, the question arose: "Why not _now_?" And after quickly working through every excuse in the book, we were exhausted of every possible reason to say "no." If we feel called to adopt, **let's do it _now_.**
+For as long as we've been married, we've had a desire to adopt. At first, we had absolutely no idea what that might mean in terms of location, finances, age of children, or anything else. But even so, as years went by, that desire seemed to slowly grow into a calling.
 
-So, here we are, thrilled to bring a new little one into our home, and slowly stumbling through the details, the planning, the questions, and every other challenge to make that happen.
+Things got more real about two years ago. At the time, we were relatively new to the area, we were working really hard to get rid of our student loan debt, and we had just welcomed our daughter Pippa into the world. Things were less than tranquil, but for some reason, we felt like we should start thinking and praying about making adoption the next big step for our family.
+
+We did, and in 2018, we began to seriously ask ourselves "Why not _now_?"
+
+So, here we are, slowly but eagerly trudging through all of the details that will lead us to bring our next child home.

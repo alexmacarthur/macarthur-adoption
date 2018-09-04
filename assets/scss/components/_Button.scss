@@ -11,4 +11,9 @@
     color: $purple--dark;
     border-color: $purple--dark;
   }
+
+  &--transparent {
+    background: rgba($white, 0);
+    color: $purple;
+  }
 }

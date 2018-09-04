@@ -10,20 +10,20 @@ title: MacArthur Adoption
   <div class="Hero-container">
 
     <h1 class="Hero-title">
-      Our family is growing.
+      Our family is growing!
     </h1>
 
     <h4 class="Hero-subTitle">
-      The MacArthurs are adopting from South Korea!
+      The MacArthurs are adopting from South Korea.
     </h4>
 
     <div class="Hero-ctaBar">
-      <a href="#involved" class="Hero-action Button">
-        Get Involved
+      <a class="Hero-action Button Button--transparent" href="#why">
+        Our Story
       </a>
 
-      <a class="Hero-action" href="#why">
-        Our Story
+      <a href="#involved" class="Hero-action Button">
+        Get Involved
       </a>
     </div>
 
@@ -33,28 +33,28 @@ title: MacArthur Adoption
 
 <section class="Section" id="why">
   <div class="Section-container">
-    <h2>We're adopting! And this is why.</h2>
+    <h2>A Brief Adoption Backstory</h2>
     {% capture why %}{% include copy/why.md %}{% endcapture %}{{ why | markdownify}}
   </div>
 </section>
 
 <section class="Section" id="why">
   <div class="Section-container">
-    <h2>Here's what we know now.</h2>
+    <h2>What We Know Now</h2>
     {% capture know %}{% include copy/know.md %}{% endcapture %}{{ know | markdownify}}
   </div>
 </section>
 
 <section class="Section" id="involved">
   <div class="Section-container">
-    <h2>But, there's no chance we can do this alone.</h2>
+    <h2>We'd Love Your Help</h2>
     {% capture need %}{% include copy/need.md %}{% endcapture %}{{ need | markdownify}}
   </div>
 </section>
 
 <section class="Section">
   <div class="Section-container">
-    <h2>Stay tuned for more!</h2>
+    <h2>Stay Updated</h2>
     {% capture more %}{% include copy/more.md %}{% endcapture %}{{ more | markdownify}}
   </div>
 </section>

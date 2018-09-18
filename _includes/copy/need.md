@@ -10,7 +10,11 @@ It's no secret that international adoptions cost more than your average, uh, bir
 
 We have a couple of exciting plans to help raise that money, but if you'd like to donate now, you can do so via <a href="https://www.paypal.me/alexmacarthur" target="_blank">PayPal</a>, or just by [getting in touch](https://macarthur.me/contact).
 
-<a href="https://paypal.me/alexmacarthur" target="_blank" class="Button">Donate via PayPal</a>
+<div class="ButtonGroup">
+  <a href="https://paypal.me/alexmacarthur" target="_blank" class="Button">Donate via PayPal</a>
+  <a href="http://m.me/axmacarthur" target="_blank" class="Button">Donate via Facebook</a>
+  <a href="https://venmo.com/amacarthur" target="_blank" class="Button">Donate via Venmo</a>
+</div>
 
 ### 3. Send us words of encouragement.
 It's my (Alex) love language, so please be extra generous.

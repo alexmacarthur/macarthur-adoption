@@ -1,9 +1,9 @@
-We're Alex and Hannah MacArthur, a couple of Minnesota-to-Tennesee transplants with two of the sweetest little girls, Autumn (3) & Pippa (2).
+We’re Alex and Hannah MacArthur, a couple of Minnesota-to-Tennessee transplants with two adorable little girls, Autumn (3) & Pippa (2).
 
-For as long as we've been married, we've had a desire to adopt. At first, we had absolutely no idea what that might mean in terms of location, finances, age of children, or anything else. But even so, as years went by, that desire seemed to slowly grow into a calling.
+For as long as we’ve been married, we’ve had a desire to adopt. We weren’t sure if it would actually happen or not, until about two years ago, when God started to put adoption on our hearts as the avenue for adding a third child to our family. We had just welcomed our daughter Pippa into the world and were still trying to get rid of our student loan debt, but we knew we needed to start praying about it.
 
-Things got more real about two years ago. At the time, we were relatively new to the area, we were working really hard to get rid of our student loan debt, and we had just welcomed our daughter Pippa into the world. Things were less than tranquil, but for some reason, we felt like we should start thinking and praying about making adoption the next big step for our family.
+In April of 2018, feeling ready for another child in our family, we started looking into different agencies and how to get started with the process. We found there were many waiting lists of children who were ready and waiting for homes, and it felt like a little fire had been lit in our hearts. After learning more about the different paths to adopt, we decided to move forward with South Korea. We were a little overwhelmed by the required program fees, and we had no idea how God would work out all the details, but we could already see a path being made for us.
 
-We did, and in 2018, we began to seriously ask ourselves "Why not _now_?"
+Since deciding to move forward down that path, we have been eagerly working through all of the details of our home study, and we are so excited to be getting even closer to bringing our next child home! Our next step is gathering the remaining country and agency fees so that we can be officially matched with a child.
 
-So, here we are, slowly but eagerly trudging through all of the details that will lead us to bring our next child home.
+Throughout this entire journey, John 6 has been reminding us to choose faith over fear. Before Jesus miraculously feeds 5,000 people, he asks Philip where they can buy food for them, and Philip responds by saying 200 days’ wages wouldn’t be enough to feed them all. We love what it says about this encounter: “[Jesus] said this to test him, for He Himself knew what He was going to do.” We know that God already has a plan, and that’s enough for us to keep taking one step at a time.

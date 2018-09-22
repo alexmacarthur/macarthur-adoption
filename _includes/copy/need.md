@@ -3,7 +3,7 @@ In 2015, we moved from Minnesota to Tennessee, knowing no one in the area, and h
 This time around, things are undoubtedly going to be more challenging, and we'd be fools to say we don't need the support to bring us into this new stage of our life. That's why we need you, and here's where you can start.
 
 ### 1. Pray for us.
-Pray for sanity throughout the process, God's hand in providing the strength, funds, and persistence we'll need along the way. Pray for the child with whom we'll eventually be matched, and for those caring for him/her until we can finally bring him/her home.
+Pray for God’s hand throughout the process. Pray for the strength, funds, and persistence we’ll need along the way. Pray for the child with whom we’ll eventually be matched, and for everything involved in their care both before and after they come home.
 
 ### 2. Contribute financially.
 It's no secret that international adoptions cost more than your average, uh, birth, and we've committed to funding this adoption debt-free. So, if you feel called & comfortable with donating to help cover the cost of this adoption, we'd be forever grateful. Total cost will come to around $42,000, and right now, **we still need around $25,000 to be able to be matched with a child.**
@@ -15,6 +15,3 @@ We have a couple of exciting plans to help raise that money, but if you'd like t
   <a href="http://m.me/axmacarthur" target="_blank" class="Button">Donate via Facebook</a>
   <a href="https://venmo.com/amacarthur" target="_blank" class="Button">Donate via Venmo</a>
 </div>
-
-### 3. Send us words of encouragement.
-It's my (Alex) love language, so please be extra generous.

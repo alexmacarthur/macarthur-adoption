@@ -3,13 +3,19 @@
   margin-top: 8rem;
   text-align: center;
   padding: 1rem;
+  color: $white;
 
-  &-link {
-    color: $white;
+  span {
     font-weight: normal;
+    font-size: $small-font-size;
+  }
 
-    &:hover {
-      color: $white;
-    }
+  a {
+    color: inherit;
+    font-size: inherit;
+  }
+
+  &:hover {
+    color: $white;
   }
 }

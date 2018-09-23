@@ -1,0 +1,36 @@
+<nav class="Nav {% if page.url == '/' %} Nav--home {% else %} Nav--page {% endif %}">
+
+  {% if page.url != '/' %}
+    <a href="/" class="Nav-logo">MacArthur Adoption</a>
+
+    <button class="Nav-toggle Button Button--bare" id="menuToggle">Open Menu</button>
+  {% endif %}
+
+  <ul class="Nav-list">
+
+    {% if page.url == '/' %}
+
+      <li class="Nav-item">
+        <a href="#why" class="Button Button--transparent">
+          Our Story
+        </a>
+      </li>
+
+    {% else %}
+
+      <li class="Nav-item">
+        <a class="Button Button--transparent" href="/">
+          Home
+        </a>
+      </li>
+
+    {% endif %}
+
+    <li class="Nav-item">
+      <a href="/quilt" class="Button Button--transparent">
+        Quilt Fundraiser
+      </a>
+    </li>
+
+  </ul>
+</nav>

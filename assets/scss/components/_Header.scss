@@ -1,4 +1,4 @@
-.Hero {
+.Header {
   text-align: left;
   width: 100vw;
   height: 100vh;
@@ -9,6 +9,22 @@
   position: relative;
   box-shadow: inset 0 -20px 0 $purple;
   max-width: 100%;
+
+  &-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &--short {
+    height: auto;
+    min-height: 300px;
+
+    @include media($mobile) {
+      min-height: 250px;
+    }
+  }
 
   &-background {
     transition: opacity .75s ease-in-out .5s;
@@ -25,6 +41,16 @@
     background-repeat: no-repeat;
     opacity: 0;
 
+    .Header--short  & {
+      transition: none;
+      background: url(/assets/img/family-bw.jpg) center 36% / cover no-repeat;
+      opacity: .1;
+
+      @include media($large) {
+        background-position: center 40%;
+      }
+    }
+
     &.is-loaded {
       opacity: .1;
     }
@@ -37,9 +63,18 @@
   }
 
   &-title {
-    margin: 0 0 1.5rem 0;
+    margin: -20px 0 0 0;
     font-size: $giant-font-size;
     line-height: 1;
+
+    .Header--short & {
+      font-size: $larger-font-size;
+      text-align: center;
+
+      @include media($tablet) {
+        font-size: $large-font-size;
+      }
+    }
 
     @include media($tablet) {
       font-size: $large-font-size;
@@ -49,9 +84,14 @@
   &-subTitle {
     font-family: $sans-serif-font-family;
     color: $gray--light;
-    margin: 0;
+    margin: 1.5rem 0 0 0;
     font-weight: normal;
     line-height: 1.5;
+
+    .Header--short & {
+      text-align: center;
+      font-size: $regular-font-size;
+    }
   }
 
   &-ctaBar {
@@ -60,10 +100,6 @@
 
   &-action {
     display: inline-block;
-
-    + .Hero-action {
-      margin-left: 2rem;
-    }
   }
 
 }

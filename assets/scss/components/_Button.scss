@@ -5,11 +5,24 @@
   padding: 1rem 2rem;
   border-radius: $border-radius;
   display: inline-block;
+  font-family: $sans-serif-font-family;
 
   &:hover {
     background: none;
     color: $purple--dark;
     border-color: $purple--dark;
+  }
+
+  &--bare {
+    background: none;
+    color: $purple;
+    font-size: $small-font-size;
+    padding: .5rem 1rem;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   &--transparent {
@@ -24,7 +37,6 @@
   @include media($mobile) {
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
   .Button {

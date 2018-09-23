@@ -1,5 +1,26 @@
+@import 'variables';
+@import 'mixins';
+
 body {
   margin: 0;
+}
+
+main {
+  flex: 1 0 auto;
+  text-align: left;
+  padding: 5rem 2rem 0;
+  max-width: 900px;
+  margin: 0 auto;
+
+  @include media($tablet) {
+    padding-top: 2rem;
+  }
+}
+
+#pageWrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 * {
@@ -16,10 +37,10 @@ img {
   }
 }
 
-@import 'mixins';
-@import 'variables';
 @import 'typography';
-@import 'components/Hero';
+@import 'components/Header';
 @import 'components/Section';
 @import 'components/Footer';
 @import 'components/Button';
+@import 'components/Nav';
+@import 'components/ImageRow';

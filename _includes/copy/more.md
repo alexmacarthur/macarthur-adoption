@@ -1,1 +1,1 @@
-To stay updated on our adoption, search us out on Facebook, and keep an eye on <a href="https://www.hannahmacarthur.com" target="_blank">Hannah's blog</a>. We'll try our best to share updates as we have them!
+Stay tuned for more updates and opportunities to get involved!

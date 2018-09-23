@@ -1,0 +1,19 @@
+.ImageRow {
+  padding: 0;
+  margin: 5rem 0 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+
+  img {
+    min-width: 100%;
+  }
+
+  @include media($mobile) {
+    flex-direction: column-reverse;
+  }
+
+  &-item {
+    padding: 1rem;
+  }
+}

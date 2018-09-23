@@ -1,17 +1,13 @@
-In 2015, we moved from Minnesota to Tennessee, knowing no one in the area, and having just found out we were pregnant with our 2nd daughter. This was hard, but with the support of friends, family, and local community, it was easier.
+### 1. Pray.
+Because of the children already waiting for families in South Korea, our child is most likely alive right now! Pray for the child, whomever God has for us, and for everything involved in their care both before and after they come home.
 
-This time around, things are undoubtedly going to be more challenging, and we'd be fools to say we don't need the support to bring us into this new stage of our life. That's why we need you, and here's where you can start.
+Pray for us. Pray for God’s hand throughout the process, and for the strength, funds, and persistence we’ll need along the way. Pray for our children during the transition time, and for strength and love to share Mommy and Daddy with a new sibling.
 
-### 1. Pray for us.
-Pray for God’s hand throughout the process. Pray for the strength, funds, and persistence we’ll need along the way. Pray for the child with whom we’ll eventually be matched, and for everything involved in their care both before and after they come home.
+### 2. Give to our quilt fundraiser.
+It’s no secret that international adoptions cost more than the average, uh, birth. For various reasons, God often calls people to things they can’t do on their own, and we’re no exception. We are so thankful to have gotten this far in the process, but right now we still need around $23,000 before we can be matched.
 
-### 2. Contribute financially.
-It's no secret that international adoptions cost more than your average, uh, birth, and we've committed to funding this adoption debt-free. So, if you feel called & comfortable with donating to help cover the cost of this adoption, we'd be forever grateful. Total cost will come to around $42,000, and right now, **we still need around $25,000 to be able to be matched with a child.**
+To help raise some of these funds, we’re excited to be making a unique quilt for this child, and we’re inviting you to be a part of it!
 
-We have a couple of exciting plans to help raise that money, but if you'd like to donate now, you can do so via <a href="https://www.paypal.me/alexmacarthur" target="_blank">PayPal</a>, or just by [getting in touch](https://macarthur.me/contact).
-
-<div class="ButtonGroup">
-  <a href="https://paypal.me/alexmacarthur" target="_blank" class="Button">Donate via PayPal</a>
-  <a href="http://m.me/axmacarthur" target="_blank" class="Button">Donate via Facebook</a>
-  <a href="https://venmo.com/amacarthur" target="_blank" class="Button">Donate via Venmo</a>
-</div>
+<a href="/quilt" class="Button">
+  Be a Part of the Fundraiser
+</a>

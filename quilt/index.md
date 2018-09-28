@@ -28,7 +28,7 @@ Whichever way you choose, just include a note that your donation is for "Adoptio
   </a>
 </div>
 
-Questions? Want to pay by check? [Email us!](mailto:ahmacarthur@gmail.com)
+Questions? Prefer to send a check? [Email us!](mailto:ahmacarthur@gmail.com)
 
 ### 3. Imagine how your name will appear on the quilt once it's complete!
 Here are just a couple of examples of how the quilt _might_ turn out. Once we find out if we are matched with a boy or girl we'll be able to complete the design. When the quilt is finished, we'll be sure to post pictures for you to see. :)

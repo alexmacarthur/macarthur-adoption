@@ -10,6 +10,36 @@
   box-shadow: inset 0 -20px 0 $purple;
   max-width: 100%;
 
+  &-arrow {
+    opacity: 0;
+    transition: transform .25s ease-in-out, opacity .75s ease-in-out 1s;
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    bottom: 5rem;
+    right: 3rem;
+
+    @include media($tablet) {
+      width: 30px;
+      height: 30px;
+      bottom: 4rem;
+      right: 2rem;
+    }
+
+    &:hover {
+      transform: translateY(-.5rem);
+    }
+
+    svg {
+      max-width: 100%;
+      height: 100%;
+    }
+
+    path {
+      fill: $purple;
+    }
+  }
+
   &-nav {
     position: absolute;
     top: 0;
@@ -19,7 +49,7 @@
 
   &--short {
     height: auto;
-    min-height: 300px;
+    min-height: 350px;
 
     @include media($mobile) {
       min-height: 250px;
@@ -53,6 +83,10 @@
 
     &.is-loaded {
       opacity: .1;
+
+      & ~ .Header-arrow {
+        opacity: 1;
+      }
     }
   }
 

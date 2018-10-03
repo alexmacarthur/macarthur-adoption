@@ -1,1 +1,2 @@
-Stay tuned for more updates and opportunities to get involved!
+Check back for updates. We'll share them as we have them!
+

@@ -9,6 +9,14 @@
     padding: 1rem;
   }
 
+  &--page {
+    padding: 0 2rem;
+
+    @include media($mobile) {
+      padding: 1rem;
+    }
+  }
+
   &--home {
     border-bottom: 0;
     padding-left: 0;
@@ -28,6 +36,7 @@
     margin: 0;
     flex: 1 0 auto;
     text-align: left;
+    font-family: $serif-font-family;
   }
 
   &-list {

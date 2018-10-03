@@ -3,29 +3,11 @@ layout: default
 title: MacArthur Adoption
 ---
 
-<header class="Header" id="top">
-
-  <div class="Header-background lazy-load" data-background-image="/assets/img/family-bw.jpg"></div>
-
-  <div class="Header-container">
-
-    <h1 class="Header-title">
-      Our family is growing!
-    </h1>
-
-    <h4 class="Header-subTitle">
-      The MacArthurs are adopting from South Korea.
-    </h4>
-
-    {% include nav.html %}
-
-  </div>
-
-  <a class="Header-arrow" href="#why">
-    {% include svg/down-arrow.svg %}
-  </a>
-
-</header>
+{%
+  include header.html
+  title="Our family is growing!"
+  subTitle="The MacArthurs are adopting from South Korea."
+%}
 
 <main>
 

@@ -1,7 +1,7 @@
 .Header {
   text-align: left;
   width: 100vw;
-  height: 100vh;
+  min-height: 450px;
   padding: 0rem 2rem;
   display: flex;
   align-items: center;
@@ -10,50 +10,11 @@
   box-shadow: inset 0 -20px 0 $purple;
   max-width: 100%;
 
-  &-arrow {
-    opacity: 0;
-    transition: transform .25s ease-in-out, opacity .75s ease-in-out 1s;
-    position: absolute;
-    width: 45px;
-    height: 45px;
-    bottom: 5rem;
-    right: 3rem;
-
-    @include media($tablet) {
-      width: 30px;
-      height: 30px;
-      bottom: 4rem;
-      right: 2rem;
-    }
-
-    &:hover {
-      transform: translateY(-.5rem);
-    }
-
-    svg {
-      max-width: 100%;
-      height: 100%;
-    }
-
-    path {
-      fill: $purple;
-    }
-  }
-
   &-nav {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-  }
-
-  &--short {
-    height: auto;
-    min-height: 350px;
-
-    @include media($mobile) {
-      min-height: 250px;
-    }
   }
 
   &-background {
@@ -66,27 +27,17 @@
     top: 0;
     background: $white;
     background-image: none;
-    background-position: center;
+    background-position: center 45%;
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0;
 
-    .Header--short  & {
-      transition: none;
-      background: url(/assets/img/family-bw.jpg) center 36% / cover no-repeat;
-      opacity: .1;
-
-      @include media($large) {
-        background-position: center 40%;
-      }
+    .Header--short & {
+      background-position: center 35%;
     }
 
     &.is-loaded {
       opacity: .1;
-
-      & ~ .Header-arrow {
-        opacity: 1;
-      }
     }
   }
 
@@ -101,15 +52,6 @@
     font-size: $giant-font-size;
     line-height: 1;
 
-    .Header--short & {
-      font-size: $larger-font-size;
-      text-align: center;
-
-      @include media($tablet) {
-        font-size: $large-font-size;
-      }
-    }
-
     @include media($tablet) {
       font-size: $large-font-size;
     }
@@ -118,18 +60,13 @@
   &-subTitle {
     font-family: $sans-serif-font-family;
     color: $gray--light;
-    margin: 1.5rem 0 0 0;
+    margin: 2rem 0 0 0;
     font-weight: normal;
     line-height: 1.5;
 
-    .Header--short & {
-      text-align: center;
-      font-size: $regular-font-size;
+    @include media($tablet) {
+      margin: 1.5rem 0 0 0;
     }
-  }
-
-  &-ctaBar {
-    margin-top: 4rem;
   }
 
   &-action {

@@ -12,7 +12,7 @@ class AdoptionSite {
   }
 
   initDropdownMenu() {
-    let navList = document.querySelector('.Nav--page .Nav-list');
+    let navList = document.querySelector('.Nav-list');
     let toggleElement = document.getElementById('menuToggle');
 
     if(toggleElement === null) return;

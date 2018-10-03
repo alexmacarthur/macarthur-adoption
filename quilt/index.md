@@ -2,7 +2,7 @@
 layout: page
 title: Quilt Fundraiser
 open_graph_title: The MacArthurs' Adoption Quilt Fundraiser
-subtitle: Sponsor a leaf, be a part of this journey!
+subtitle: Sponsor a leaf, be a part of our journey!
 description: Help bring our newest family member home by contributing to our quilt fundraiser.
 ---
 

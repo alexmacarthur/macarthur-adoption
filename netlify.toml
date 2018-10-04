@@ -9,7 +9,7 @@
   for = "/*"
 
   [headers.values]
-    Cache-Control = "public, max-age=86400, must-revalidate"
+    Cache-Control = "public, max-age=3600, must-revalidate"
     Link = [
       "</assets/js/scripts.min.js>; rel=preload; as=script",
       "</assets/css/style.min.css>; rel=preload; as=style"

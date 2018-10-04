@@ -45,6 +45,7 @@ class AdoptionSite {
 
   initDropdownMenu() {
     let navList = document.querySelector('.Nav-list');
+    let navItems = document.querySelectorAll('.Nav-item a');
     let toggleElement = document.getElementById('menuToggle');
 
     if(toggleElement === null) return;
@@ -59,6 +60,12 @@ class AdoptionSite {
         navList.classList.add('is-open');
         toggle.innerHTML = 'Close Menu';
       }
+    });
+
+    [].slice.call(navItems).forEach(link => {
+      link.addEventListener('click', e => {
+        navList.classList.remove('is-open');
+      });
     });
   }
 

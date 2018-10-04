@@ -17,6 +17,10 @@ main {
   }
 }
 
+.turbolinks-progress-bar {
+  background-color: $purple;
+}
+
 #pageWrapper {
   display: flex;
   flex-direction: column;

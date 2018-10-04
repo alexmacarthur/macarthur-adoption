@@ -6,9 +6,41 @@ import Turbolinks from 'turbolinks';
 class AdoptionSite {
 
   constructor() {
+    this.preload();
     this.initLazyLoading();
     this.initSmoothScrolling();
     this.initDropdownMenu();
+  }
+
+  preload() {
+    let links = document.querySelectorAll('a[href]');
+    let loadedLinks = [];
+
+    [].slice.call(links).forEach(link => {
+      let href = link.getAttribute("href");
+
+      if (!href.match(/^\//)) {
+        return;
+      }
+
+      if(loadedLinks.indexOf(href) > -1) {
+        return;
+      }
+
+      let prefetchLink = document.createElement("link");
+      prefetchLink.setAttribute("rel", "prefetch");
+      prefetchLink.setAttribute("as", "document");
+      prefetchLink.setAttribute("href", href);
+
+      let preloadLink = document.createElement("link");
+      preloadLink.setAttribute("rel", "prerender");
+      preloadLink.setAttribute("href", href);
+
+      document.head.appendChild(prefetchLink);
+      document.head.appendChild(preloadLink);
+
+      loadedLinks.push(href);
+    })
   }
 
   initDropdownMenu() {

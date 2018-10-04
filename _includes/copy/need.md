@@ -9,5 +9,5 @@ It’s no secret that international adoptions cost more than the average, uh, bi
 To help raise some of these funds, we’re excited to be making a unique quilt for this child, and we’re inviting you to be a part of it!
 
 <a href="/quilt" class="Button">
-  Be a Part of the Fundraiser
+  Sponsor a Leaf
 </a>

@@ -1,14 +1,15 @@
 .Header {
   text-align: left;
   width: 100vw;
-  min-height: 450px;
+  min-height: 550px;
   padding: 0rem 2rem;
+  display: block;
+  position: relative;
+  box-shadow: $purple-bar-box-shadow;
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  box-shadow: inset 0 -20px 0 $purple;
-  max-width: 100%;
 
   &-nav {
     position: absolute;
@@ -42,26 +43,18 @@
   }
 
   &-container {
-    position: relative;
-    max-width: 1200px;
-    z-index: 1;
+    width: auto;
   }
 
   &-title {
     margin: -20px 0 0 0;
-    font-size: $giant-font-size;
     line-height: 1;
-
-    @include media($tablet) {
-      font-size: $large-font-size;
-    }
   }
 
   &-subTitle {
-    font-family: $sans-serif-font-family;
-    color: $gray--light;
     margin: 2rem 0 0 0;
     font-weight: normal;
+    font-family: $sans-serif-font-family;
     line-height: 1.5;
 
     @include media($tablet) {

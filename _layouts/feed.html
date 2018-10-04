@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+{% include head.html %}
+
+<body id="body">
+
+  <div id="pageWrapper">
+
+    {%
+      include header.html
+      title="Adoption Updates"
+      subTitle="Here's what been happening!"
+    %}
+
+    <main>
+
+      {% assign post_size = site.posts | size %}
+
+      {% if post_size > 0 %}
+
+        <ul class="PostList">
+
+          {% for post in site.posts %}
+            <li class="PostList-item BarSeparator">
+              <h2 class="PostList-title">
+                <a href="{{ post.url }}">
+                  {{ post.title }}
+                </a>
+              </h2>
+              <span class="PostList-date">
+                {{ post.date | date: '%B %d, %Y' }}
+              </span>
+              <p class="PostList-excerpt">{{ post.excerpt }}</p>
+            </li>
+          {% endfor %}
+        </ul>
+
+      {% else %}
+
+      <h3 style="text-align: center;">Nothing here now, but check back soon!</h3>
+
+      {% endif %}
+
+    </main>
+
+    {% include footer.html %}
+
+  </div>
+
+</body>
+
+</html>

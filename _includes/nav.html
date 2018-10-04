@@ -1,32 +1,26 @@
 <nav class="Nav {% if page.url == '/' %} Nav--home {% else %} Nav--page {% endif %}">
 
-  <button class="Nav-toggle Button Button--bare" id="menuToggle">Open Menu</button>
+  <button class="Nav-toggle Button Button--transparent" id="menuToggle">Open Menu</button>
 
   <ul class="Nav-list">
 
-    {% if page.url == '/' %}
-
-      <li class="Nav-item">
-        <a href="#why" class="Button Button--transparent">
-          Our Story
-        </a>
-      </li>
-
-    {% else %}
-
-      <li class="Nav-item">
-        <a class="Button Button--transparent" href="/">
-          Home / Our Story
-        </a>
-      </li>
-
-    {% endif %}
+    <li class="Nav-item">
+      <a href="{% if page.url == '/' %}#why{% else %}/{% endif; %}" class="Button {% if page.url != '/' %}Button--transparent{% endif %}">
+        Home
+      </a>
+    </li>
 
     <li class="Nav-item">
-      <a href="/quilt" class="Button Button--transparent">
+      <a href="/quilt" class="Button {% if page.url != '/quilt/' %}Button--transparent{% endif %}">
         Quilt Fundraiser
       </a>
     </li>
+
+    <!-- <li class="Nav-item">
+      <a href="/updates" class="Button {% if page.url != '/updates/' %}Button--transparent{% endif %}">
+        Updates
+      </a>
+    </li> -->
 
   </ul>
 </nav>

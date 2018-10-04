@@ -9,26 +9,23 @@
   text-align: center;
 
   &:hover {
-    background: none;
-    color: $purple--dark;
-    border-color: $purple--dark;
-  }
-
-  &--bare {
-    background: none;
     color: $purple;
-    font-size: $small-font-size;
-    padding: .5rem 1rem;
-    cursor: pointer;
+    background: none;
 
-    &:focus {
-      outline: none;
+    .Nav & {
+      background: $purple;
+      color: $white;
     }
   }
 
   &--transparent {
     background: rgba($white, 0);
     color: $purple;
+
+    &:hover {
+      color: $purple--dark;
+      border-color: $purple--dark;
+    }
   }
 }
 

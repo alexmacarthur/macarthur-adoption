@@ -1,0 +1,42 @@
+.PostHeader {
+  margin-top: 10rem;
+
+  @include media($tablet) {
+    margin-bottom: 5rem;
+  }
+
+  &-sub {
+    display: flex;
+    justify-content: center;
+
+    @include media($tablet) {
+      display: block;
+    }
+  }
+
+  &-date,
+  &-subTitle {
+    font-family: $sans-serif-font-family;
+    font-weight: normal;
+  }
+
+  &-title {
+    font-size: $large-font-size;
+  }
+
+  &-date {
+    margin-right: 3px;
+    font-weight: bold;
+
+    @include media($tablet) {
+      span {
+        display: none;
+      }
+    }
+  }
+
+  &-container {
+    padding-bottom: 7rem;
+    box-shadow: $purple-bar-box-shadow;
+  }
+}

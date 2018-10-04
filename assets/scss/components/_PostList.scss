@@ -1,0 +1,22 @@
+.PostList {
+  list-style: none;
+  padding: 0;
+
+  &-item {
+    display: block;
+  }
+
+  &-title {
+    font-size: $medium-font-size;
+    color: $gray;
+
+    a {
+      font-size: inherit;
+      color: inherit;
+
+      &:hover {
+        color: $purple;
+      }
+    }
+  }
+}

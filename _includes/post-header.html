@@ -1,0 +1,28 @@
+<header class="PostHeader">
+
+  {% include nav.html %}
+
+  <div class="Container PostHeader-container">
+
+    <h1 class="PostHeader-title">
+      {{ include.title }}
+    </h1>
+
+    <div class="PostHeader-sub">
+
+      {% if include.date %}
+      <h4 class="PostHeader-date">
+        {{ include.date | date: '%B %d, %Y' }}
+        <span>&mdash;</span>
+      </h4>
+      {% endif %}
+
+      <h4 class="PostHeader-subTitle">
+        {{ include.subTitle }}
+      </h4>
+
+    </div>
+
+  </div>
+
+</header>

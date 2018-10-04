@@ -11,6 +11,7 @@ main {
   padding: 5rem 2rem 0;
   max-width: 900px;
   margin: 0 auto;
+  width: 100%;
 
   @include media($tablet) {
     padding-top: 2rem;
@@ -42,9 +43,13 @@ img {
 }
 
 @import 'typography';
+@import 'components/Container';
 @import 'components/Header';
 @import 'components/Section';
 @import 'components/Footer';
 @import 'components/Button';
 @import 'components/Nav';
 @import 'components/ImageRow';
+@import 'components/PostList';
+@import 'components/PostHeader';
+@import 'components/BarSeparator';

@@ -30,6 +30,13 @@ a {
   }
 }
 
+a,
+button {
+  &:focus {
+    outline: $purple;
+  }
+}
+
 p {
   margin-bottom: 2rem;
 }
@@ -47,7 +54,12 @@ h6 {
 }
 
 h1 {
-  font-size: $large-font-size;
+  font-size: $giant-font-size;
+  line-height: 1.25;
+
+  @include media($tablet) {
+    font-size: $large-font-size;
+  }
 }
 
 h2 {

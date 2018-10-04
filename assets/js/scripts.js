@@ -1,7 +1,7 @@
 import 'intersection-observer';
 import jump from 'jump.js';
 import lozad from 'lozad';
-import InstantClick from 'instantclick'
+import Turbolinks from 'turbolinks';
 
 class AdoptionSite {
 
@@ -65,8 +65,9 @@ class AdoptionSite {
   }
 }
 
-InstantClick.init();
+Turbolinks.start();
 
-InstantClick.on('change', () => {
+//-- On each load, initialize JS.
+window.addEventListener('turbolinks:load', (e) => {
   new AdoptionSite();
 });

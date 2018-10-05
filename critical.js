@@ -23,3 +23,13 @@ critical.generate(Object.assign({
   src: 'index.html',
   dest: 'index.html'
 }, baseOptions));
+
+critical.generate(Object.assign({
+  src: 'quilt/index.html',
+  dest: 'quilt/index.html'
+}, baseOptions));
+
+critical.generate(Object.assign({
+  src: 'updates/index.html',
+  dest: 'updates/index.html'
+}, baseOptions));

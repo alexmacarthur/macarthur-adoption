@@ -15,10 +15,10 @@
 
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Montserrat:400,400i,600" rel="stylesheet">
 
-  <link rel="preload" href="/assets/js/scripts.min.js" as="script" />
-  <link rel="preload" rel="stylesheet" type="text/css" href="/assets/css/style.min.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="/assets/js/scripts.min.js?v={{ site.random_number }}" as="script" />
+  <link rel="preload" rel="stylesheet" type="text/css" href="/assets/css/style.min.css?v={{ site.random_number }}" as="style" onload="this.rel='stylesheet'">
 
-  <script defer src="/assets/js/scripts.min.js"></script>
+  <script defer src="/assets/js/scripts.min.js?v={{ site.random_number }}"></script>
 
   <script>
     !function(e){"use strict";var n=function(n,t,o){function i(e){if(a.body)return e();setTimeout(function(){i(e)})}function r(){l.addEventListener&&l.removeEventListener("load",r),l.media=o||"all"}var d,a=e.document,l=a.createElement("link");if(t)d=t;else{var f=(a.body||a.getElementsByTagName("head")[0]).childNodes;d=f[f.length-1]}var s=a.styleSheets;l.rel="stylesheet",l.href=n,l.media="only x",i(function(){d.parentNode.insertBefore(l,t?d:d.nextSibling)});var u=function(e){for(var n=l.href,t=s.length;t--;)if(s[t].href===n)return e();setTimeout(function(){u(e)})};return l.addEventListener&&l.addEventListener("load",r),l.onloadcssdefined=u,u(r),l};"undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this);

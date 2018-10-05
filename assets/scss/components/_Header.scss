@@ -1,7 +1,7 @@
 .Header {
   text-align: left;
   width: 100vw;
-  min-height: 550px;
+  min-height: 500px;
   padding: 0rem 2rem;
   display: block;
   position: relative;
@@ -10,6 +10,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include media($tablet) {
+    min-height: 400px;
+  }
 
   &-nav {
     position: absolute;
@@ -31,11 +35,7 @@
     background-position: center 45%;
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: 0;
-
-    .Header--short & {
-      background-position: center 35%;
-    }
+    opacity: 1;
 
     &.is-loaded {
       opacity: .1;

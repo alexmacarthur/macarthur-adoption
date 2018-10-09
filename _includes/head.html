@@ -18,6 +18,10 @@
   <link rel="preload" href="/assets/js/scripts.min.js?v={{ site.random_number }}" as="script" />
   <link rel="preload" rel="stylesheet" type="text/css" href="/assets/css/style.min.css?v={{ site.random_number }}" as="style" onload="this.rel='stylesheet'">
 
+  {% assign grant_link = 'https://mystory.lifesongfororphans.org/stories/macarthurs-adopting-south-korea/' %}
+  <link rel="prefetch" href="{{ grant_link }}" as="document" />
+  <link rel="prerender" href="{{ grant_link }}" />
+
   <script defer src="/assets/js/scripts.min.js?v={{ site.random_number }}"></script>
 
   <script>

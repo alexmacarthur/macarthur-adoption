@@ -1,8 +1,13 @@
 $black: #000000;
 $white: #ffffff;
 $gray: #373836;
+$green: #5bbd8c;
 $gray--light: lighten($gray, 10%);
+$gray--mediumLight: lighten($gray, 40%);
+$gray--extraLight: lighten($gray, 60%);
+$gray--veryExtraLight: lighten($gray, 75%);
 $purple: #9A94BC;
+$pink: #ed6b86;
 $purple--dark: darken($purple, 10%);
 
 $border-radius: 25px;

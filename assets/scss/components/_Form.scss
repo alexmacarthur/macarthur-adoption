@@ -1,0 +1,100 @@
+.Form {
+  position: relative;
+  max-width: 650px;
+  margin: 0 auto;
+  border: 1px solid $gray--extraLight;
+  border-radius: 5px;
+  padding: 2rem 3rem 2rem;
+
+  &.no-border {
+    border: 0;
+  }
+
+  &-label {
+    display: block;
+    position: relative;
+    margin: 0 1rem 1rem 0;
+    font-weight: bold;
+  }
+
+  &-list {
+    list-style: none;
+    padding: 0;
+
+    &Item {
+      display: flex;
+      margin: 0;
+
+      @include media($tablet) {
+        flex-direction: column;
+      }
+
+      & + .Form-listItem {
+        margin-top: 2rem;
+      }
+
+      div {
+        width: 50%;
+        align-items: center;
+
+        @include media($tablet) {
+          width: 100%;
+        }
+
+        &:first-child {
+          padding: 0 1rem 0 0;
+
+          @include media($tablet) {
+            padding: 0 0 1rem 0;
+          }
+        }
+      }
+    }
+  }
+
+  &-alert {
+    color: $pink;
+    font-size: $small-font-size;
+    display: block;
+  }
+
+  .StripeElement--invalid {
+    & ~ .Form-alert {
+      padding: 1rem 2rem 0;
+    }
+  }
+
+  &-row {
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  &-splitRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media($tablet) {
+      flex-direction: column-reverse;
+
+      & > div {
+        padding: 1rem 0;
+      }
+    }
+  }
+
+  &-total {
+    margin: 0;
+    font-family: $sans-serif-font-family;
+
+    span {
+      font-size: inherit;
+    }
+  }
+
+  #submitButton {
+    margin-top: 1rem;
+  }
+}

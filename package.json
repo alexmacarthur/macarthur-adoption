@@ -20,13 +20,19 @@
     "concurrently": "^3.5.0",
     "critical": "^1.1.0",
     "html-minifier": "^3.5.7",
-    "laravel-mix": "^1.6.1"
+    "laravel-mix": "^1.6.1",
+    "netlify-lambda": "^0.4.0"
   },
   "dependencies": {
+    "@babel/core": "^7.0.0",
+    "axios": "^0.18.0",
+    "dotenv": "^6.1.0",
     "intersection-observer": "^0.5.0",
     "jump.js": "^1.0.2",
     "lozad": "^1.6.0",
     "normalize.css": "^8.0.0",
-    "turbolinks": "^5.2.0"
+    "stripe": "^6.12.1",
+    "turbolinks": "^5.2.0",
+    "uuid": "^3.3.2"
   }
 }

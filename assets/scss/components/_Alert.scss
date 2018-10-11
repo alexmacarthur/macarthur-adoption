@@ -1,0 +1,22 @@
+.Alert {
+  border-radius: 5px;
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  color: $white;
+  text-align: center;
+  background: $purple;
+  display: block;
+
+  a {
+    color: inherit;
+    font-weight: bold;
+  }
+
+  &.is-success {
+    background: $green;
+  }
+
+  &.is-error {
+    background: $pink;
+  }
+}

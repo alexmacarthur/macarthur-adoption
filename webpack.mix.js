@@ -1,7 +1,6 @@
 require('dotenv').config();
-
-const mix = require('laravel-mix');
 const webpack = require('webpack');
+const mix = require('laravel-mix');
 const BabiliPlugin = require('babili-webpack-plugin');
 
 /*
@@ -12,8 +11,21 @@ const BabiliPlugin = require('babili-webpack-plugin');
 
 mix.webpackConfig({
   plugins: [
-    new BabiliPlugin()
-  ]
+    new BabiliPlugin(),
+    new webpack.DefinePlugin({
+      STRIPE_PUBLISHABLE_KEY: JSON.stringify(process.env.STRIPE_PUBLISHABLE_KEY),
+      STRIPE_SECRET_KEY: JSON.stringify(process.env.STRIPE_SECRET_KEY),
+      LAMBDA_ENDPOINT: JSON.stringify(process.env.LAMBDA_ENDPOINT),
+      COFFEE_PRICING: JSON.stringify({
+        commuter: 1600,
+        woodsman: 1600,
+        darkhorse: 1600
+      })
+    })
+  ],
+  externals: {
+    Stripe: "Stripe"
+  }
 });
 
 /*

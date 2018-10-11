@@ -29,7 +29,7 @@
     right: 1rem;
     z-index: 3;
 
-    @include media($mobile) {
+    @include media($tablet) {
       display: block;
     }
   }
@@ -50,7 +50,7 @@
     justify-content: flex-end;
     transition: all .15s ease-in-out;
 
-    @include media($mobile) {
+    @include media($tablet) {
       position: fixed;
       text-align: center;
       margin: 0;
@@ -68,7 +68,7 @@
       }
     }
 
-    @include media($mobile) {
+    @include media($tablet) {
       flex-direction: column;
     }
   }
@@ -76,14 +76,14 @@
   &-item {
     margin: 0;
 
-    @include media($mobile) {
+    @include media($tablet) {
       width: 100%;
     }
 
     & + .Nav-item {
       margin: 0 0 0 2rem;
 
-      @include media($mobile) {
+      @include media($tablet) {
         margin: 1rem 0 0 0;
       }
     }

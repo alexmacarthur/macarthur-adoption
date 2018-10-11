@@ -1,0 +1,163 @@
+---
+layout: page
+title: Coffee Fundraiser
+open_graph_title: Good, Local Coffee for a Great, Local Cause
+subtitle: "Good, Local Coffee for a Great, Local Cause"
+description: Help bring our newest family member home by contributing to our quilt fundraiser.
+---
+
+{% markdown index.md %}
+
+<br>
+<br>
+
+<form action="/charge" method="post" id="paymentForm" class="Form">
+
+  <div class="BarSeparator">
+
+    <div class="Form-row">
+
+      <label class="Form-label">
+        Quantity
+      </label>
+
+      <ul class="Form-list">
+        <li class="Form-listItem">
+          <div>
+            <label for="blend_commuter">
+              Commuter &mdash; $16
+            </label>
+            <small>
+              Light roast | blackberry, citrus, brown sugar. 12oz bag.
+            </small>
+          </div>
+          <div>
+            <input required type="number" min="0" value="0" name="blend_commuter" id="blend_commuter">
+          </div>
+        </li>
+        <li class="Form-listItem">
+          <div>
+            <label for="blend_woodsman">
+              Woodsman &mdash; $16
+            </label>
+            <small>
+              Medium roast | oranges, chocolate, cedar 12oz bag.
+            </small>
+          </div>
+          <div>
+            <input required type="number" min="0" value="0" name="blend_woodsman" id="blend_woodsman">
+          </div>
+        </li>
+        <li class="Form-listItem">
+          <div>
+            <label for="blend_commuter">
+              Dark Horse &mdash; $16
+            </label>
+            <small>
+              Dark roast | toasted marshmallow, black pepper, cavendish pipe tobacco. 12oz bag.
+            </small>
+          </div>
+          <div>
+            <input required type="number" min="0" value="0" name="blend_darkhorse" id="blend_darkhorse">
+          </div>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="Form-row">
+
+      <label class="Form-label" for="name">
+        Type
+      </label>
+
+      <select name="type">
+        <option value="whole_bean">Whole Bean</option>
+        <option value="ground">Ground</option>
+      </select>
+
+    </div>
+
+  </div>
+
+  <div class="BarSeparator">
+
+    <div class="Form-row">
+
+      <label class="Form-label" for="name">
+        Your Name
+      </label>
+
+      <input required type="text" name="name" id="name" />
+
+    </div>
+
+    <div class="Form-row">
+
+      <label class="Form-label" for="email">
+        Your Email Address
+      </label>
+
+      <input required type="email" name="email" id="email" />
+
+    </div>
+
+    <div class="Form-row">
+
+      <label class="Form-label" for="phone">
+        Your Phone Number
+      </label>
+
+      <input required type="tel" name="phone" id="phone" />
+
+    </div>
+
+    <div class="Form-row">
+
+      <label class="Form-label" for="address">
+        Your Address
+      </label>
+
+      <input required type="text" name="address" id="address">
+
+    </div>
+
+    <div class="Form-row">
+
+      <label class="Form-label" for="message">
+        Message (Optional)
+      </label>
+
+      <textarea name="message"></textarea>
+
+    </div>
+
+    <div class="Form-row">
+
+      <label class="Form-label" for="address">
+        Payment Card
+      </label>
+
+      <div id="cardElement"></div>
+
+      <span class="Form-alert" id="cardErrors" role="alert"></span>
+
+    </div>
+
+    <div class="Form-row Form-splitRow">
+
+      <div>
+        <button id="submitButton" class="Form-submit Button">Submit Payment</button>
+      </div>
+
+      <div>
+        <h4 class="Form-total">Total: <span id="total">$0</span></h4>
+      </div>
+
+    </div>
+
+  </div>
+
+  <span class="Alert" style="display: none;" id="alert"></span>
+
+</form>

@@ -2,6 +2,7 @@ import 'intersection-observer';
 import jump from 'jump.js';
 import lozad from 'lozad';
 import Turbolinks from 'turbolinks';
+import CheckoutFlow from './CheckoutFlow';
 
 class AdoptionSite {
 
@@ -10,6 +11,8 @@ class AdoptionSite {
     this.initLazyLoading();
     this.initSmoothScrolling();
     this.initDropdownMenu();
+
+    new CheckoutFlow();
   }
 
   preload() {

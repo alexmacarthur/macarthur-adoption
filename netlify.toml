@@ -1,6 +1,7 @@
 [build]
   publish = "_site"
   command = "npm run build"
+  functions = "lambda"
 
 [context.production.environment]
   NODE_VERSION = "v8.4.0"

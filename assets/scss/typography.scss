@@ -12,14 +12,21 @@ a,
 span,
 th,
 td,
-li {
+li,
+button,
+select {
   margin: 0 0 3px;
   line-height: 1.35;
   font-size: $regular-font-size;
   font-weight: 300;
 }
 
-a {
+small {
+  display: block;
+  color: $gray--mediumLight;
+}
+
+a, button {
   color: $purple;
   cursor: pointer;
   font-weight: 700;

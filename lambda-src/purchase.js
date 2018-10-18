@@ -69,7 +69,14 @@ exports.handler = function(event, context, callback) {
   }, async function (err, charge) {
 
     if (charge == null || charge.status !== 'succeeded') {
+
       console.error(err);
+
+      return callback(null, {
+        statusCode,
+        headers,
+        body: 'failure'
+      });
     }
 
     await sgMail.send({

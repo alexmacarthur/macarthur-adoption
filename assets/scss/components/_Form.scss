@@ -21,6 +21,37 @@
     font-weight: bold;
   }
 
+  &-inputWrapper {
+    position: relative;
+    display: flex;
+
+    input {
+      margin-left: 2.5rem;
+      width: calc(100% - 2.5rem);
+
+      @include media($tablet) {
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+
+    i {
+      position: absolute;
+      padding-right: 1rem;
+      font-style: normal;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100%;
+
+      @include media($tablet) {
+        position: relative;
+        width: 2.5rem;
+        left: auto;
+      }
+    }
+  }
+
   &-list {
     list-style: none;
     padding: 0;
@@ -37,7 +68,7 @@
         margin-top: 2rem;
       }
 
-      div {
+      & > div {
         width: 50%;
         align-items: center;
 

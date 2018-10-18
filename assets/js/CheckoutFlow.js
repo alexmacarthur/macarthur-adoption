@@ -58,23 +58,32 @@ export default class {
     });
   }
 
+  getCurrentTotal() {
+    let formData = this.getFormData();
+    let orderData = this.getOrderData(formData);
+    let additionalDonationValue = document.getElementById('additional_donation').value * 100;
+    return orderData.total + additionalDonationValue;
+  }
+
   watchForTotalUpdate() {
     let numberInputs = document.querySelectorAll('[type="number"]');
 
     let totalElement = document.getElementById('total');
     [].slice.call(numberInputs).forEach(input => {
       input.addEventListener('input', (e) => {
-        let formData = this.getFormData(this.form.elements);
-        let orderData = this.getOrderData(formData);
-        totalElement.innerHTML = `$${orderData.total / 100}`;
+        totalElement.innerHTML = `$${this.getCurrentTotal() / 100}`;
       });
+    });
+
+    document.getElementById('additional_donation').addEventListener('input', (e) => {
+      totalElement.innerHTML = `$${this.getCurrentTotal() / 100}`;
     });
   }
 
-  getFormData(rawData) {
+  getFormData() {
     let data = {};
 
-    Array.from(rawData).forEach(input => {
+    Array.from(this.form.elements).forEach(input => {
       if (
         input.type !== 'submit' &&
         !!input.name
@@ -158,7 +167,7 @@ export default class {
 
       } else {
 
-        let formData = this.getFormData(event.target.elements);
+        let formData = this.getFormData();
         let orderData = this.getOrderData(formData);
 
         if (orderData.total < 1) {
@@ -173,11 +182,12 @@ export default class {
           .post(
             `${LAMBDA_ENDPOINT}purchase`, {
               token: token,
-              total: orderData.total,
+              total: this.getCurrentTotal(),
               items: orderData.items,
               email: formData.email,
               address: formData.address,
               phone: formData.phone,
+              additional_donation: formData.additional_donation,
               message: formData.message !== undefined ? formData.message : '',
               name: formData.name,
               grind: formData.grind,

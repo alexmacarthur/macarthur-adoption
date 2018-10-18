@@ -53,6 +53,10 @@ exports.handler = function(event, context, callback) {
     message: data.message
   };
 
+  if (data.additional_donation) {
+    metadata.additional_donation = `$${data.additional_donation}`;
+  }
+
   if(data.message) {
     metadata.message = data.message;
   }

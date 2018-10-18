@@ -13,6 +13,7 @@ export default class {
     this.rand = uuid();
 
     this.setUpStripeElements();
+    this.watchForTotalUpdate();
     this.watchForSubmit();
   }
 

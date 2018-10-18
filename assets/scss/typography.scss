@@ -24,6 +24,12 @@ select {
 small {
   display: block;
   color: $gray--mediumLight;
+  font-weight: normal;
+  font-size: $small-font-size;
+
+  a {
+    font-size: inherit;
+  }
 }
 
 a, button {

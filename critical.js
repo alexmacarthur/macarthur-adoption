@@ -33,3 +33,8 @@ critical.generate(Object.assign({
   src: 'updates/index.html',
   dest: 'updates/index.html'
 }, baseOptions));
+
+critical.generate(Object.assign({
+  src: 'coffee/index.html',
+  dest: 'coffee/index.html'
+}, baseOptions));

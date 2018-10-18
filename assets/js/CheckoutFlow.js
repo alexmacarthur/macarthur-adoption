@@ -6,8 +6,11 @@ export default class {
 
     if (typeof Stripe === "undefined") return;
 
-    this.stripe = Stripe(STRIPE_PUBLISHABLE_KEY);
     this.form = document.getElementById('paymentForm');
+
+    if(!this.form) return;
+
+    this.stripe = Stripe(STRIPE_PUBLISHABLE_KEY);
     this.alert = document.getElementById('alert');
     this.submitButton = document.getElementById('submitButton');
     this.rand = uuid();

@@ -33,7 +33,7 @@ exports.handler = function(event, context, callback) {
     !data.address ||
     !data.phone ||
     !data.name ||
-    !data.type ||
+    !data.grind ||
     !data.idempotency_key
   ) {
 
@@ -47,7 +47,7 @@ exports.handler = function(event, context, callback) {
   let metadata = {
     name: data.name,
     items: JSON.stringify(data.items),
-    type: data.type,
+    grind: data.grind,
     phone: data.phone,
     address: data.address,
     message: data.message

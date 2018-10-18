@@ -180,7 +180,7 @@ export default class {
               phone: formData.phone,
               message: formData.message !== undefined ? formData.message : '',
               name: formData.name,
-              type: formData.type,
+              grind: formData.grind,
               idempotency_key: this.rand
             }, {
               headers: {

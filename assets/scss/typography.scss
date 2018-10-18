@@ -14,11 +14,24 @@ th,
 td,
 li,
 button,
-select {
+select,
+blockquote {
   margin: 0 0 3px;
   line-height: 1.35;
   font-size: $regular-font-size;
   font-weight: 300;
+}
+
+blockquote {
+  margin: 0 2rem 2rem 2rem;
+  padding: 2rem 2.5rem;
+  color: $gray--light;
+  background: $gray--veryExtraLight;
+  border-radius: 5px;
+
+  @include media($tablet) {
+    margin: 0 1rem 2rem 1rem;
+  }
 }
 
 small {

@@ -6,6 +6,10 @@
   border-radius: 5px;
   padding: 2rem 3rem 2rem;
 
+  @include media($tablet) {
+    padding: 2rem 1.5rem 2rem;
+  }
+
   &.no-border {
     border: 0;
   }
@@ -67,7 +71,6 @@
 
   &-row {
     position: relative;
-    overflow: hidden;
     align-items: center;
     padding: 1rem 0;
   }

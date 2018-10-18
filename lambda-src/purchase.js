@@ -6,8 +6,11 @@ const headers = {
   "Access-Control-Allow-Origin" : "*",
   "Access-Control-Allow-Headers": "Content-Type"
 };
+const sgMail = require('@sendgrid/mail');
 
-  exports.handler = function(event, context, callback) {
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+exports.handler = function(event, context, callback) {
 
   if (event.httpMethod !== 'POST' || !event.body) {
     callback(null, {
@@ -63,16 +66,23 @@ const headers = {
     metadata
   }, {
     idempotency_key: data.idempotency_key
-  }, function (err, charge) {
+  }, async function (err, charge) {
 
     if (charge == null || charge.status !== 'succeeded') {
       console.error(err);
     }
 
+    await sgMail.send({
+      to: 'ahmacarthur@gmail.com',
+      from: 'ahmacarthur@gmail.com',
+      subject: 'Coffee has been purchased!',
+      html: `${data.name} just purchased the following items: ${JSON.stringify(data.items)}.`,
+    });
+
     return callback(null, {
       statusCode,
       headers,
-      body: charge ? charge.status : "Something's up."
+      body: charge.status
     });
   });
 

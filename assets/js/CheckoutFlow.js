@@ -86,7 +86,7 @@ export default class {
   getFormData() {
     let data = {};
 
-    Array.from(this.form.elements).forEach(input => {
+    [].slice.call(this.form.elements).forEach(input => {
       if (
         input.type !== 'submit' &&
         !!input.name

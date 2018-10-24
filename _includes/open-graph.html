@@ -1,5 +1,5 @@
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-<meta property="og:image" content="{{ site.url }}/assets/img/open-graph.jpg">
+<meta property="og:image" content="{% if page.open_graph_image %}{{ page.open_graph_image }}{% else %}{{ site.url }}/assets/img/open-graph.jpg{% endif %}">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{% if page.open_graph_title %}{{ page.open_graph_title }}{% else %}{{ site.title }}{% endif %}">
 <meta property="og:description" content="{% if page.description %}{{ page.description}}{% else %}{{site.description}}{% endif %}">

@@ -1,7 +1,7 @@
 .Header {
   text-align: left;
   width: 100vw;
-  min-height: 500px;
+  min-height: 425px;
   padding: 0rem 2rem;
   display: block;
   position: relative;
@@ -9,8 +9,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 45px;
 
   @include media($tablet) {
+    padding-top: 37.5px;
     min-height: 400px;
   }
 

@@ -1,7 +1,5 @@
 <nav class="Nav {% if page.url == '/' %} Nav--home {% else %} Nav--page {% endif %}">
 
-
-
   <button class="Nav-toggle Button Button--transparent" id="menuToggle">Open Menu</button>
 
   <ul class="Nav-list">
@@ -9,12 +7,6 @@
     <li class="Nav-item">
       <a href="{% if page.url == '/' %}#why{% else %}/{% endif; %}" class="Nav-button Button {% if page.url != '/' %}Button--transparent{% endif %}">
         Home
-      </a>
-    </li>
-
-    <li class="Nav-item">
-      <a href="/quilt" class="Nav-button Button {% if page.url != '/quilt/' %}Button--transparent{% endif %}">
-        Quilt Fundraiser
       </a>
     </li>
 

@@ -1,10 +1,25 @@
-<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+{% if page.description %}
+  {% assign og_description = page.description %}
+{% elsif page.id %}
+  {% capture og_description %}{{ page.excerpt | strip_html | strip_newlines | truncate: 300}}{% endcapture %}
+{% else %}
+  {% assign og_description = site.description %}
+{% endif %}
+
+{% if page.open_graph_title %}
+  {% assign og_title = page.open_graph_title %}
+{% elsif page.title %}
+  {% assign og_title = page.title %}
+{% else %}
+  {% assign og_title = site.title %}
+{% endif %}
+
 <meta property="og:image" content="{% if page.open_graph_image %}{{ page.open_graph_image }}{% else %}{{ site.url }}/assets/img/open-graph.jpg{% endif %}">
 <meta property="og:type" content="website">
-<meta property="og:title" content="{% if page.open_graph_title %}{{ page.open_graph_title }}{% else %}{{ site.title }}{% endif %}">
-<meta property="og:description" content="{% if page.description %}{{ page.description}}{% else %}{{site.description}}{% endif %}">
+<meta property="og:title" content="{{ og_title }}">
+<meta property="og:description" content="{{ og_description }}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{% if page.open_graph_title %}{{ page.open_graph_title }}{% else %}{{ site.title }}{% endif %}">
-<meta name="twitter:description" content="{% if page.description %}{{ page.description}}{% else %}{{site.description}}{% endif %}">
+<meta name="twitter:title" content="{{ og_title }} | {{ site.title }}">
+<meta name="twitter:description" content="{{ og_description }}">
 <meta name="twitter:image" content="{{ site.url }}/assets/img/open-graph.jpg">
 <meta name="twitter:creator" content="@amacarthur" />

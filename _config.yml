@@ -5,7 +5,8 @@ keywords: adoption,south korea,family,internation adoption,adopt
 url: "https://adopt.macarthur.me"
 exclude: [node_modules, mix-manifest.js, webpack.mix.js, Gemfile, Gemfile.lock, package.json, yarn.lock, critical.js]
 markdown: kramdown
-permalink: /posts/:title
+permalink: /updates/:title
+future: true
 excerpt_separator: <!--more-->
 plugins:
   - jekyll-sitemap

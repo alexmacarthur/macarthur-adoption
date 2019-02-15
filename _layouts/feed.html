@@ -30,9 +30,11 @@
                 </a>
               </h2>
               <span class="PostList-date">
-                {{ post.date | date: '%B %d, %Y' }}
+                <p>{{ post.date | date: '%B %d, %Y' }}</p>
               </span>
-              <p class="PostList-excerpt">{{ post.excerpt }}</p>
+              <p class="PostList-excerpt">
+                {{ post.excerpt | strip_html | strip_newlines | truncate: 156 }}
+              </p>
             </li>
           {% endfor %}
         </ul>

@@ -27,12 +27,14 @@ Essentially, there are two paperwork steps that have to happen, and then we take
     After the MOHW approves emigration, our files are usually submitted to the Korean courts within a week. From there, it takes about 1-2 months to get approved and notified of a court date, which is typically scheduled about 4-6 weeks out from there.
 
 3. **First Trip to Korea**
+
     We must appear in court on the day of the hearing, so we take our first trip to Korea at that time. We also are able to meet our son -- maybe even on a few different occasions! Most people go home after the hearing to wait for notification of custody and visa date, which takes about 6 weeks. Some people have chosen to stay the whole time, though, if their work and schedule allow it.
 
 4. **Second Trip to Korea**
+
     After the final approval is given, we are given a few options for visa dates and make a second trip to Korea to appear for that. We take custody and get to travel home! Many people like to see a few things in-country as a family before heading home, but each child grieves differently, so we will probably try to experience some of the culture before custody, and on the 1st trip as well, to make sure we can learn about Korea and his heritage before going home.
 
-    The USCIS will also need to approve immigration into the US at some point in this process. But this usually does not impact any timelines because it's going on at the same time as everything in Korea.
+The USCIS will also need to approve immigration into the US at some point in this process. But this usually does not impact any timelines because it's going on at the same time as everything in Korea.
 
 ## Please Pray for Us
 

@@ -3,9 +3,9 @@ layout: "post"
 title: "We've Been Matched! What's Next?"
 ---
 
-Over the last couple of months we have been able to finish financing the country fees, with the huge help of all of you who donated to our matching grant or other fundraisers. And now we have been matched with a little boy! We are very excited to get him home! Here are a few things we can share with you about our little boy.
+Over the last couple of months, we've been able to finish financing the country fees, with the huge help of all of you who donated to our matching grant or other fundraisers. And now we have been matched with a little boy! We are very excited to get him home! Here are a few things we can share with you about him.
 
-* He is currently about 16 months old. (He is 17 months younger than Pippa, who is 17 months younger than Autumn!)
+* He is currently about 17 months old. (He is 17 months younger than Pippa, who is 17 months younger than Autumn!)
 * We have given him the name _Emry_.
 * His middle name will be his Korean name.
 * He does not have any current diagnosed special needs. He has gone through loss and trauma like every child who loses something so interwoven in their life. Also, what we can see on paper is never complete enough to know everything, so there will always be things we don't know and can't anticipate (just like with our biological children).
@@ -14,7 +14,7 @@ Over the last couple of months we have been able to finish financing the country
 
 ## When will he come home?
 
-Each of the steps in the process takes a varied amount of time, so we really don't know when we travel, but our best guess is that we will be traveling sometime between July and December. (I know, huge time frame right?) The further along we get in the steps, the better idea we will have about the rest of the timeline.
+Each of the steps in the process takes a varied amount of time, so we really don't know when we travel, but our best guess is that we will be traveling sometime between July and December. (I know, huge time frame, right?) The further along we get in the steps, the better idea we will have about the rest of the timeline.
 
 Essentially, there are two paperwork steps that have to happen, and then we take two trips to Korea. Here's a little process outline:
 
@@ -36,7 +36,7 @@ Essentially, there are two paperwork steps that have to happen, and then we take
 
 The USCIS will also need to approve immigration into the US at some point in this process. But this usually does not impact any timelines because it's going on at the same time as everything in Korea.
 
-## Please Pray for Us
+## Please pray for us!
 
 Moving forward, there are a few specific things we would like to ask prayer for.
 
@@ -50,6 +50,6 @@ Moving forward, there are a few specific things we would like to ask prayer for.
 
 3. **That God would protect and cover our marriage and our family during this time.**
 
-    Not only have we had, and still have, finances to figure out, but there is so much else that goes on that we haven't been able to share yet. The devil wants to destroy joy, hope, love, peace, etc. He wants this to be terrible so that we can't encourage anyone else. He wants us to be a mess, so that we bring Emry pain instead of goodness. But God is bigger. So we want to ask for your prayers to preserve love, hope, joy, and peace in our family throughout the waiting period and when we bring him home. Pray that we have time to prepare our hearts for this child. That we can dedicate ourselves to learning more about the attachment process in adoption, and prepare ourselves to comfort a grieving child after custody.
+    Not only have we had, and still have, finances to figure out, but there are so many other details and stressors going on that we've been navigating. But God is bigger. So, we want to ask for your prayers to preserve love, hope, joy, and peace in our family throughout the waiting period and when we bring him home. Pray that we have time to prepare our hearts for this child. That we can dedicate ourselves to learning more about the attachment process in adoption, and prepare ourselves to comfort a grieving child after custody.
 
 Thank you again for all of your support!

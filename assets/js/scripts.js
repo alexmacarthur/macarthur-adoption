@@ -35,12 +35,7 @@ class AdoptionSite {
       prefetchLink.setAttribute("as", "document");
       prefetchLink.setAttribute("href", href);
 
-      let preloadLink = document.createElement("link");
-      preloadLink.setAttribute("rel", "prerender");
-      preloadLink.setAttribute("href", href);
-
       document.head.appendChild(prefetchLink);
-      document.head.appendChild(preloadLink);
 
       loadedLinks.push(href);
     })

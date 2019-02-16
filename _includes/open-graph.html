@@ -14,6 +14,7 @@
   {% assign og_title = site.title %}
 {% endif %}
 
+<meta name="description" content="{{ og_description }}">
 <meta property="og:image" content="{% if page.open_graph_image %}{{ page.open_graph_image }}{% else %}{{ site.url }}/assets/img/open-graph.jpg{% endif %}">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ og_title }}">

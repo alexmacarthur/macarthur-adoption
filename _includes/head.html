@@ -3,7 +3,6 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{% if page.description %}{{ page.description}}{% else %}{{site.description}}{% endif %}">
   <meta name="keywords" content="{{ site.keywords }}">
   <meta name="author" content="Alex MacArthur">
 
@@ -17,12 +16,6 @@
 
   <link rel="preload" href="/assets/js/scripts.min.js?v={{ site.random_number }}" as="script" />
   <link rel="preload" rel="stylesheet" type="text/css" href="/assets/css/style.min.css?v={{ site.random_number }}" as="style" onload="this.rel='stylesheet'">
-
-  {% assign grant_link = 'https://mystory.lifesongfororphans.org/stories/macarthurs-adopting-south-korea/' %}
-  <link rel="prefetch" href="{{ grant_link }}" as="document" />
-  <link rel="prerender" href="{{ grant_link }}" />
-
-  <script defer src="https://js.stripe.com/v3/"></script>
 
   <script defer src="/assets/js/scripts.min.js?v={{ site.random_number }}"></script>
 

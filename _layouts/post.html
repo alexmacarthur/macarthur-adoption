@@ -9,15 +9,17 @@
   <div id="pageWrapper">
 
     {%
+      assign postDate = page.date | date: '%B %d, %Y'
+    %}
+
+    {%
       include header.html
-      title="Adoption Updates"
-      subTitle="Here's what's been happening!"
+      title=page.title
+      subTitle=postDate
     %}
 
     <main>
-      <a href="/updates">Back to All Updates</a>
-      <h2>{{ page.title }}</h2>
-      <span><p>{{ page.date | date: '%B %d, %Y' }}</p></span>
+      <a class="Breadcrumb" href="/updates">Back to All Updates</a>
       {{ content }}
     </main>
 

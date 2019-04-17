@@ -2,17 +2,15 @@
   text-align: left;
   width: 100vw;
   min-height: 425px;
-  padding: 0rem 2rem;
+  padding: 8rem 2rem 2rem;
   display: block;
   position: relative;
   max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 45px;
 
   @include media($tablet) {
-    padding-top: 37.5px;
     min-height: 400px;
   }
 
@@ -57,11 +55,16 @@
 
   &-container {
     width: auto;
+    max-width: 1100px;
+
+    // Offset to account for the purple bar at bottom of header.
+    margin-bottom: 20px;
   }
 
   &-title {
     margin: -20px 0 0 0;
-    line-height: 1;
+    line-height: 1.15;
+    text-align: center;
   }
 
   &-subTitle {
@@ -69,6 +72,7 @@
     font-weight: normal;
     font-family: $sans-serif-font-family;
     line-height: 1.5;
+    text-align: center;
 
     @include media($tablet) {
       margin: 1.5rem 0 0 0;

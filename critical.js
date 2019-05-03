@@ -5,7 +5,7 @@ const baseOptions = {
   base: '_site/',
   minify: true,
   ignore: ['@font-face'],
-  css: ['assets/css/style.min.css'],
+  css: ['assets/dist/css/style.min.css'],
   extract: true,
   dimensions: [
     {

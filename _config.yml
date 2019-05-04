@@ -3,7 +3,7 @@ description: "The MacArthur family is adopting from South Korea."
 baseurl: ""
 keywords: adoption,south korea,family,internation adoption,adopt
 url: "https://adopt.macarthur.me"
-exclude: [node_modules, mix-manifest.js, webpack.mix.js, Gemfile, Gemfile.lock, package.json, yarn.lock, critical.js]
+exclude: [node_modules, webpack.config.js, Gemfile, Gemfile.lock, package.json, package-lock.json, critical.js]
 markdown: kramdown
 permalink: /updates/:title
 future: true

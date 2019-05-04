@@ -6,6 +6,7 @@ export default class {
     if (typeof Stripe === "undefined") return;
 
     this.form = document.getElementById("paymentForm");
+    this.displayedTotal = document.getElementById("total");
 
     if (!this.form) return;
 
@@ -17,6 +18,10 @@ export default class {
     this.setUpStripeElements();
     this.watchForTotalUpdate();
     this.watchForSubmit();
+  }
+
+  refreshDisplayedTotal() {
+    this.displayedTotal.innerHTML = `$${this.getCurrentTotal() / 100}`;
   }
 
   setUpStripeElements() {
@@ -65,23 +70,32 @@ export default class {
     let orderData = this.getOrderData(formData);
     let additionalDonationValue =
       document.getElementById("additional_donation").value * 100;
-    return orderData.total + additionalDonationValue;
+    let shippingValue = formData.should_ship ? 500 : 0;
+    return orderData.total + additionalDonationValue + shippingValue;
   }
 
   watchForTotalUpdate() {
     let numberInputs = document.querySelectorAll('[type="number"]');
+    let shippingTotal = document.getElementById('shipping_total');
 
-    let totalElement = document.getElementById("total");
     [].slice.call(numberInputs).forEach(input => {
       input.addEventListener("input", e => {
-        totalElement.innerHTML = `$${this.getCurrentTotal() / 100}`;
+        this.refreshDisplayedTotal();
       });
     });
 
     document
       .getElementById("additional_donation")
       .addEventListener("input", e => {
-        totalElement.innerHTML = `$${this.getCurrentTotal() / 100}`;
+        this.refreshDisplayedTotal();
+      });
+
+    // Display shipping total, if checked.
+    document
+      .getElementById("should_ship")
+      .addEventListener("input", e => {
+        shippingTotal.style.display = e.target.checked ? 'block' : 'none';
+        this.refreshDisplayedTotal();
       });
   }
 
@@ -89,8 +103,12 @@ export default class {
     let data = {};
 
     [].slice.call(this.form.elements).forEach(input => {
-      if (input.type !== "submit" && !!input.name) {
-        data[input.name] = input.value;
+      if (!!input.name) {
+        if(input.type === "checkbox") {
+          data[input.name] = input.checked;
+        } else if (input.type !== "submit") {
+          data[input.name] = input.value;
+        }
       }
     });
 
@@ -159,6 +177,8 @@ export default class {
         let formData = this.getFormData();
         let orderData = this.getOrderData(formData);
 
+        console.log(formData);
+
         if (orderData.total < 1) {
           this.setAlert({
             message: "You need to choose at least one bag of coffee.",
@@ -180,6 +200,7 @@ export default class {
             message: formData.message !== undefined ? formData.message : "",
             name: formData.name,
             grind: formData.grind,
+            should_ship: formData.should_ship,
             idempotency_key: this.rand
           },
           {

@@ -1,5 +1,4 @@
 require('dotenv').config();
-const bodyParser = require('body-parser');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const statusCode = 200;
 const headers = {
@@ -10,16 +9,14 @@ const sgMail = require('@sendgrid/mail');
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-exports.handler = function(event, context, callback) {
+exports.handler = async function(event) {
 
   if (event.httpMethod !== 'POST' || !event.body) {
-    callback(null, {
+    return {
       statusCode,
       headers,
       body: ''
-    });
-
-    return;
+    };
   }
 
   const data = JSON.parse(event.body);
@@ -37,11 +34,11 @@ exports.handler = function(event, context, callback) {
     !data.idempotency_key
   ) {
 
-    return callback(null, {
+    return {
       statusCode,
       headers,
       body: 'failure'
-    });
+    };
   }
 
   let metadata = {
@@ -50,7 +47,8 @@ exports.handler = function(event, context, callback) {
     grind: data.grind,
     phone: data.phone,
     address: data.address,
-    message: data.message
+    message: data.message,
+    should_ship: data.should_ship
   };
 
   if (data.additional_donation) {
@@ -61,40 +59,44 @@ exports.handler = function(event, context, callback) {
     metadata.message = data.message;
   }
 
-  stripe.charges.create({
-    amount: data.total,
-    currency: 'usd',
-    source: data.token.id,
-    receipt_email: data.email,
-    description: `Coffee fundraiser purchase from ${data.name}`,
-    metadata
-  }, {
-    idempotency_key: data.idempotency_key
-  }, async function (err, charge) {
+  let charge;
 
-    if (charge == null || charge.status !== 'succeeded') {
+  try {
+    charge = await stripe.charges.create({
+      amount: data.total,
+      currency: 'usd',
+      source: data.token.id,
+      receipt_email: data.email,
+      description: `Coffee fundraiser purchase from ${data.name}`,
+      metadata
+    }, {
+      idempotency_key: data.idempotency_key
+    });
+  } catch (e) {
 
-      console.error(err);
+    console.error(e);
 
-      return callback(null, {
-        statusCode,
-        headers,
-        body: 'failure'
-      });
-    }
+    return {
+      statusCode,
+      headers,
+      body: 'failure'
+    };
+  }
 
+  try {
     await sgMail.send({
       to: 'ahmacarthur@gmail.com',
       from: 'ahmacarthur@gmail.com',
       subject: 'Coffee has been purchased!',
       html: `${data.name} just purchased the following items: ${JSON.stringify(data.items)}.`,
     });
+  } catch (e) {
+    console.error(e);
+  }
 
-    return callback(null, {
-      statusCode,
-      headers,
-      body: charge.status
-    });
-  });
-
+  return {
+    statusCode,
+    headers,
+    body: charge.status
+  };
 }

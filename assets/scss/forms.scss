@@ -18,11 +18,17 @@ select,
   }
 }
 
-label {
+label, form h3 {
   color: $gray--light;
   font-size: $regular-font-size;
 }
 
 select {
   height: 51px;
+}
+
+[type="checkbox"] {
+  & + label {
+    cursor: pointer;
+  }
 }

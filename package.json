@@ -16,6 +16,7 @@
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "autoprefixer": "^9.5.1",
     "concurrently": "^3.5.0",
@@ -24,7 +25,7 @@
     "file-loader": "^3.0.1",
     "html-minifier": "^3.5.7",
     "mini-css-extract-plugin": "^0.6.0",
-    "netlify-lambda": "^0.4.0",
+    "netlify-lambda": "^1.4.7",
     "node-sass": "^4.12.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-loader": "^3.0.0",
@@ -35,6 +36,7 @@
     "webpack-cli": "^3.3.1"
   },
   "dependencies": {
+    "@babel/runtime": "^7.4.4",
     "@sendgrid/mail": "^6.3.1",
     "axios": "^0.18.0",
     "babel-loader": "^8.0.5",

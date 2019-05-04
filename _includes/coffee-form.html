@@ -72,7 +72,7 @@
     <div class="Form-row">
 
       <label class="Form-label" for="name">
-        Your Name
+        Name
       </label>
 
       <input required type="text" name="name" id="name" />
@@ -82,7 +82,7 @@
     <div class="Form-row">
 
       <label class="Form-label" for="email">
-        Your Email Address
+        Email Address
       </label>
 
       <input required type="email" name="email" id="email" />
@@ -92,7 +92,7 @@
     <div class="Form-row">
 
       <label class="Form-label" for="phone">
-        Your Phone Number
+        Phone Number
       </label>
 
       <input required type="tel" name="phone" id="phone" />
@@ -102,10 +102,23 @@
     <div class="Form-row">
 
       <label class="Form-label" for="address">
-        Your Address
+        Address
       </label>
 
       <input required type="text" name="address" id="address">
+
+    </div>
+
+    <div class="Form-row">
+
+      <h3>Shipping ($5 flat rate!)</h3>
+
+      <small class="Form-description">For those who live outside the Spring Hill/Franklin, TN area, we'll ship your coffee for a flat $5, regardless of quantity.</small>
+
+      <div class="Form-checkboxWrapper">
+        <input type="checkbox" name="should_ship" id="should_ship">
+        <label for="should_ship">Yes, I would like this shipped for me.</label>
+      </div>
 
     </div>
 
@@ -154,6 +167,7 @@
       </div>
 
       <div>
+        <small id="shipping_total" style="display:none;">Shipping: $5</small>
         <h4 class="Form-total">Total: <span id="total">$0</span></h4>
       </div>
 

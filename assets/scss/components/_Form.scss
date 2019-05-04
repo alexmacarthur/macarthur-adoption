@@ -21,6 +21,21 @@
     font-weight: bold;
   }
 
+  &-checkboxWrapper {
+    display: flex;
+    margin-top: 2rem;
+
+    input {
+      flex: 0 1;
+      width: auto;
+      margin-right: 1.5rem;
+    }
+
+    small {
+      flex: 1 1 auto;
+    }
+  }
+
   &-inputWrapper {
     position: relative;
     display: flex;
@@ -104,6 +119,11 @@
     position: relative;
     align-items: center;
     padding: 1rem 0;
+
+    small {
+      margin-bottom: .25rem;
+      display: block;
+    }
   }
 
   &-splitRow {

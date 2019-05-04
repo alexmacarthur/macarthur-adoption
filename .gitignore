@@ -6,8 +6,5 @@ _site
 .jekyll-metadata
 lambda/*
 .env
-
-# Compiled Assets
-scripts.min.js
-style.min.css
+assets/dist/*
 

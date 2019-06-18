@@ -6,6 +6,7 @@ const headers = {
   "Access-Control-Allow-Headers": "Content-Type"
 };
 const sgMail = require('@sendgrid/mail');
+const Airtable = require('airtable');
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
@@ -90,6 +91,37 @@ exports.handler = async function(event) {
       subject: 'Coffee has been purchased!',
       html: `${data.name} just purchased the following items: ${JSON.stringify(data.items)}.`,
     });
+  } catch (e) {
+    console.error(e);
+  }
+
+  try {
+    Airtable.configure({
+      endpointUrl: 'https://api.airtable.com',
+      apiKey: process.env.AIRTABLE_API_KEY
+    });
+
+    const base = Airtable.base(process.env.AIRTABLE_BASE);
+    const coffeeOrder = JSON.parse(metadata.items)
+
+    delete metadata.items;
+
+    for(let prop in coffeeOrder) {
+      metadata[`blend: ${prop}`] = coffeeOrder[prop];
+    }
+
+    for (let prop in metadata) {
+      metadata[prop] = String(metadata[prop]);
+    }
+
+    base('Coffee Purchases').create(metadata, function (err, record) {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      console.log(record.getId());
+    });
+
   } catch (e) {
     console.error(e);
   }

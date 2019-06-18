@@ -30,7 +30,7 @@ const baseConfiguration = {
       COFFEE_PRICING: JSON.stringify({
         commuter: 1600,
         woodsman: 1600,
-        darkhorse: 1600
+        dark_horse: 1600
       })
     })
   ],

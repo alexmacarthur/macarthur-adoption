@@ -9,6 +9,42 @@ const sgMail = require('@sendgrid/mail');
 const Airtable = require('airtable');
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+Airtable.configure({
+  endpointUrl: 'https://api.airtable.com',
+  apiKey: process.env.AIRTABLE_API_KEY
+});
+
+const saveToAirtable = data => {
+  const base = Airtable.base(process.env.AIRTABLE_BASE);
+
+  return new Promise((resolve, reject) => {
+    base('Coffee Purchases').create(data, function (err, record) {
+      if (err) {
+        console.log(err);
+        return reject(err);
+      }
+
+      return resolve(record.getId());
+    });
+  });
+}
+
+const formatForAirtable = metadata => {
+  const coffeeOrder = JSON.parse(metadata.items);
+  let airTableData = { ...metadata };
+
+  delete airTableData.items;
+
+  for (let prop in coffeeOrder) {
+    airTableData[`blend: ${prop}`] = coffeeOrder[prop];
+  }
+
+  for (let prop in airTableData) {
+    airTableData[prop] = String(airTableData[prop]);
+  }
+
+  return airTableData;
+}
 
 exports.handler = async function(event) {
 
@@ -84,43 +120,20 @@ exports.handler = async function(event) {
     };
   }
 
+  let airTableData = formatForAirtable(metadata);
+
+  console.log(airTableData);
+
   try {
-    await sgMail.send({
+    let airtablePromise = saveToAirtable(airTableData);
+    let emailPromise = sgMail.send({
       to: 'ahmacarthur@gmail.com',
       from: 'ahmacarthur@gmail.com',
       subject: 'Coffee has been purchased!',
       html: `${data.name} just purchased the following items: ${JSON.stringify(data.items)}.`,
     });
-  } catch (e) {
-    console.error(e);
-  }
 
-  try {
-    Airtable.configure({
-      endpointUrl: 'https://api.airtable.com',
-      apiKey: process.env.AIRTABLE_API_KEY
-    });
-
-    const base = Airtable.base(process.env.AIRTABLE_BASE);
-    const coffeeOrder = JSON.parse(metadata.items)
-
-    delete metadata.items;
-
-    for(let prop in coffeeOrder) {
-      metadata[`blend: ${prop}`] = coffeeOrder[prop];
-    }
-
-    for (let prop in metadata) {
-      metadata[prop] = String(metadata[prop]);
-    }
-
-    base('Coffee Purchases').create(metadata, function (err, record) {
-      if (err) {
-        console.error(err);
-        return;
-      }
-      console.log(record.getId());
-    });
+    await Promise.all([airtablePromise, emailPromise]);
 
   } catch (e) {
     console.error(e);

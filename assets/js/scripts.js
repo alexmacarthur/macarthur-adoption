@@ -1,7 +1,7 @@
 import "intersection-observer";
 import jump from "jump.js";
 import lozad from "lozad";
-import Turbolinks from "turbolinks";
+// import Turbolinks from "turbolinks";
 import CheckoutFlow from "./CheckoutFlow";
 
 class AdoptionSite {
@@ -99,9 +99,11 @@ class AdoptionSite {
   }
 }
 
-Turbolinks.start();
+new AdoptionSite();
 
-//-- On each load, initialize JS.
-window.addEventListener("turbolinks:load", e => {
-  new AdoptionSite();
-});
+// Turbolinks.start();
+
+// //-- On each load, initialize JS.
+// window.addEventListener("turbolinks:load", e => {
+
+// });

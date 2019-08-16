@@ -56,7 +56,27 @@ const baseConfiguration = {
         use: {
           loader: 'babel-loader',
           options: {
-            cacheDirectory: true
+            cacheDirectory: true,
+            presets: [
+              ['@babel/preset-env', {
+                targets: {
+                  browsers: [
+                    '> 2%',
+                    'Last 2 versions',
+                    'safari >=9',
+                    'not ie < 11'
+                  ]
+                }
+              }]
+            ],
+            plugins: [
+              [
+                "@babel/plugin-transform-runtime",
+                {
+                  regenerator: true
+                }
+              ]
+            ]
           }
         }
       },

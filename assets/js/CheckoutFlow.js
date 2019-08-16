@@ -76,7 +76,7 @@ export default class {
 
   watchForTotalUpdate() {
     let numberInputs = document.querySelectorAll('[type="number"]');
-    let shippingTotal = document.getElementById('shipping_total');
+    let shippingTotal = document.getElementById("shipping_total");
 
     [].slice.call(numberInputs).forEach(input => {
       input.addEventListener("input", e => {
@@ -91,12 +91,10 @@ export default class {
       });
 
     // Display shipping total, if checked.
-    document
-      .getElementById("should_ship")
-      .addEventListener("input", e => {
-        shippingTotal.style.display = e.target.checked ? 'block' : 'none';
-        this.refreshDisplayedTotal();
-      });
+    document.getElementById("should_ship").addEventListener("input", e => {
+      shippingTotal.style.display = e.target.checked ? "block" : "none";
+      this.refreshDisplayedTotal();
+    });
   }
 
   getFormData() {
@@ -104,7 +102,7 @@ export default class {
 
     [].slice.call(this.form.elements).forEach(input => {
       if (!!input.name) {
-        if(input.type === "checkbox") {
+        if (input.type === "checkbox") {
           data[input.name] = input.checked;
         } else if (input.type !== "submit") {
           data[input.name] = input.value;

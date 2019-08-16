@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const path = require('path');
 const webpack = require('webpack');
+const merge = require('webpack-merge');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -97,4 +98,48 @@ const baseConfiguration = {
   }
 };
 
-module.exports = baseConfiguration;
+const modernConfiguration = merge.smart(baseConfiguration, {
+  output: {
+    filename: 'scripts.modern.min.js',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        include: /(js)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            cacheDirectory: true,
+            presets: [
+              ['@babel/preset-env', {
+                targets: {
+                  browsers: [
+                    'Edge >= 16',
+                    'Firefox >= 60',
+                    'Chrome >= 61',
+                    'Safari >= 11',
+                    'Opera >= 48'
+                  ]
+                }
+              }]
+            ],
+            plugins: [
+              [
+                "@babel/plugin-transform-runtime",
+                {
+                  regenerator: true
+                }
+              ]
+            ]
+          }
+        }
+      }
+    ]
+  }
+});
+
+module.exports = [
+  baseConfiguration,
+  modernConfiguration
+];

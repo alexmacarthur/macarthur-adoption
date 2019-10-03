@@ -30,3 +30,17 @@
   margin: 1rem 0;
   border-radius: 3px;
 }
+
+@mixin divider {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 8px;
+  width: 100%;
+  top: 0;
+  left: 50%;
+  width: 500px;
+  max-width: 100%;
+  transform: translateX(-50%) skew(50deg);
+  background: rgba($purple, .15);
+}

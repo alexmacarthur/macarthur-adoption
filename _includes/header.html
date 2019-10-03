@@ -4,16 +4,20 @@
 
   <div class="Header-background lazy-load" data-background-image="/assets/img/family-bw.jpg"></div>
 
-  <div class="Container Header-container">
+  {% if page.url == '/' %}
 
-    <h1 class="Header-title">
-      {{ include.title }}
-    </h1>
+    <div class="Container Header-container">
 
-    <h4 class="Header-subTitle">
-      {{ include.subTitle }}
-    </h4>
+      <h1 class="Header-title">
+        {{ include.title }}
+      </h1>
 
-  </div>
+      <h4 class="Header-subTitle">
+        {{ include.subTitle }}
+      </h4>
+
+    </div>
+
+  {% endif %}
 
 </header>

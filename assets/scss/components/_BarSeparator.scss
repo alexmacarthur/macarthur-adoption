@@ -9,21 +9,7 @@
     margin-top: 5rem;
 
     &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      height: 8px;
-      width: 100%;
-      top: 0;
-      left: 50%;
-      width: 500px;
-      max-width: 100%;
-      transform: translateX(-50%) skew(50deg);
-      background: rgba($purple, .15);
-
-      @include media($small) {
-        transform: translateX(-50%) skew(0deg);
-      }
+      @include divider;
     }
   }
 }

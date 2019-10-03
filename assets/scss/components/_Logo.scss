@@ -1,0 +1,17 @@
+.Logo {
+  display: block;
+  font-weight: bold;
+  white-space: nowrap;
+  font-size: $medium-font-size;
+  font-family: $serif-font-family;
+  margin: 0;
+
+  @include media($tablet) {
+    font-size: $medium-ish-font-size;
+  }
+
+  a {
+    font: inherit;
+    color: inherit;
+  }
+}

@@ -16,11 +16,18 @@ li,
 button,
 select,
 blockquote,
+time,
 i {
   margin: 0 0 3px;
   line-height: 1.45;
   font-size: $regular-font-size;
   font-weight: 300;
+}
+
+time {
+  margin: -1.5rem 0 2rem;
+  display: block;
+  color: $gray--mediumLight;
 }
 
 blockquote {
@@ -86,6 +93,24 @@ h1 {
 
   @include media($tablet) {
     font-size: $large-font-size;
+  }
+
+  main & {
+    font-size: $large-font-size;
+    margin-bottom: 5rem;
+
+    @include media($tablet) {
+      font-size: $medium-font-size;
+    }
+
+    &:after {
+      @include divider;
+      position: relative;
+      width: 100px;
+      left: 0;
+      transform: translateX(0) skew(50deg);
+      margin-top: 2rem;
+    }
   }
 }
 

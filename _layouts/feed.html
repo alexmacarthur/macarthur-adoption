@@ -16,6 +16,8 @@
 
     <main>
 
+      <h1>{{page.title}}</h1>
+
       {% assign post_size = site.posts | size %}
 
       {% if post_size > 0 %}
@@ -29,9 +31,9 @@
                   {{ post.title }}
                 </a>
               </h2>
-              <span class="PostList-date">
+              <time>
                 <p>{{ post.date | date: '%B %d, %Y' }}</p>
-              </span>
+              </time>
               <p class="PostList-excerpt">
                 {{ post.excerpt | strip_html | strip_newlines | truncate: 156 }}
               </p>

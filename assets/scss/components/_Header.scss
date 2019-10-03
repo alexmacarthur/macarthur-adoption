@@ -2,7 +2,6 @@
   text-align: left;
   width: 100vw;
   min-height: 425px;
-  padding: 8rem 2rem 2rem;
   display: block;
   position: relative;
   max-width: 100%;
@@ -12,6 +11,14 @@
 
   @include media($tablet) {
     min-height: 400px;
+  }
+
+  &--page {
+    min-height: 0;
+
+    @include media($tablet) {
+      min-height: 0;
+    }
   }
 
   &-nav {
@@ -56,9 +63,7 @@
   &-container {
     width: auto;
     max-width: 1100px;
-
-    // Offset to account for the purple bar at bottom of header.
-    margin-bottom: 20px;
+    margin-bottom: -5rem;
   }
 
   &-title {

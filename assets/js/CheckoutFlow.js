@@ -77,6 +77,7 @@ export default class {
   watchForTotalUpdate() {
     let numberInputs = document.querySelectorAll('[type="number"]');
     let shippingTotal = document.getElementById('shipping_total');
+    let paymentRow = document.getElementById('payment_row');
 
     [].slice.call(numberInputs).forEach(input => {
       input.addEventListener("input", e => {
@@ -95,6 +96,7 @@ export default class {
       .getElementById("should_ship")
       .addEventListener("input", e => {
         shippingTotal.style.display = e.target.checked ? 'block' : 'none';
+        paymentRow.style.display = e.target.checked ? 'none' : 'block';
         this.refreshDisplayedTotal();
       });
   }
@@ -159,25 +161,44 @@ export default class {
     this.form.addEventListener("submit", async event => {
       event.preventDefault();
 
+      let token, error;
+      let formData = this.getFormData();
+      let shouldProcessViaStripe = !formData.should_ship;
+      let orderData = this.getOrderData(formData);
+      let requestPayload = {
+        total: this.getCurrentTotal(),
+        items: orderData.items,
+        email: formData.email,
+        address: formData.address,
+        phone: formData.phone,
+        additional_donation: formData.additional_donation,
+        message: formData.message !== undefined ? formData.message : "",
+        name: formData.name,
+        grind: formData.grind,
+        should_ship: formData.should_ship
+      };
+
       this.setAlert({
         message: "Processing...",
         isBad: false
       });
 
-      const { token, error } = await this.stripe.createToken(this.card);
+      if (shouldProcessViaStripe) {
+        let tokenCreationResult = await this.stripe.createToken(this.card);
+        token = tokenCreationResult.token;
+        error = tokenCreationResult.error;
+      }
 
-      if (error) {
+      // We're only concerned with Stripe errors if we'll be processing via Stripe.
+      if (shouldProcessViaStripe && error) {
         this.setAlert({
           message: false
         });
 
         const errorElement = document.getElementById("cardErrors");
         errorElement.textContent = error.message;
-      } else {
-        let formData = this.getFormData();
-        let orderData = this.getOrderData(formData);
 
-        console.log(formData);
+      } else {
 
         if (orderData.total < 1) {
           this.setAlert({
@@ -187,22 +208,17 @@ export default class {
           return;
         }
 
+        // We're processing this w/ Stripe, so we need to add on a couple of Stripe-specific things.
+        if (shouldProcessViaStripe) {
+          requestPayload = Object.assign({}, requestPayload, {
+            token: token,
+            idempotency_key: this.rand
+          });
+        }
+
         let response = await axios.post(
           `${LAMBDA_ENDPOINT}purchase`,
-          {
-            token: token,
-            total: this.getCurrentTotal(),
-            items: orderData.items,
-            email: formData.email,
-            address: formData.address,
-            phone: formData.phone,
-            additional_donation: formData.additional_donation,
-            message: formData.message !== undefined ? formData.message : "",
-            name: formData.name,
-            grind: formData.grind,
-            should_ship: formData.should_ship,
-            idempotency_key: this.rand
-          },
+          requestPayload,
           {
             headers: {
               "Content-Type": "application/json"

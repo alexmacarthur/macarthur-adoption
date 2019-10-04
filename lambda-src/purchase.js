@@ -60,15 +60,13 @@ exports.handler = async function(event) {
 
   //-- Make sure we have all required data. Otherwise, escape.
   if(
-    !data.token ||
     !data.total ||
     !data.items ||
     !data.email ||
     !data.address ||
     !data.phone ||
     !data.name ||
-    !data.grind ||
-    !data.idempotency_key
+    !data.grind
   ) {
 
     return {
@@ -99,26 +97,28 @@ exports.handler = async function(event) {
   let charge;
   let chargeDescription = `Coffee purchase ${data.should_ship ? "(with shipping) " : ""}from ${data.name}`
 
-  try {
-    charge = await stripe.charges.create({
-      amount: data.total,
-      currency: 'usd',
-      source: data.token.id,
-      receipt_email: data.email,
-      description: chargeDescription,
-      metadata
-    }, {
-      idempotency_key: data.idempotency_key
-    });
-  } catch (e) {
+  if (data.should_ship) {
+    try {
+      charge = await stripe.charges.create({
+        amount: data.total,
+        currency: 'usd',
+        source: data.token.id,
+        receipt_email: data.email,
+        description: chargeDescription,
+        metadata
+      }, {
+        idempotency_key: data.idempotency_key
+      });
+    } catch (e) {
 
-    console.error(e);
+      console.error(e);
 
-    return {
-      statusCode,
-      headers,
-      body: 'failure'
-    };
+      return {
+        statusCode,
+        headers,
+        body: 'failure'
+      };
+    }
   }
 
   let airTableData = formatForAirtable(metadata);
@@ -141,6 +141,6 @@ exports.handler = async function(event) {
   return {
     statusCode,
     headers,
-    body: charge.status
+    body: charge.status ? charge.status : 'done'
   };
 }

@@ -28,9 +28,9 @@ const baseConfiguration = {
       STRIPE_SECRET_KEY: JSON.stringify(process.env.STRIPE_SECRET_KEY),
       LAMBDA_ENDPOINT: JSON.stringify(process.env.LAMBDA_ENDPOINT),
       COFFEE_PRICING: JSON.stringify({
-        commuter: 1600,
-        woodsman: 1600,
-        dark_horse: 1600
+        commuter: 2000,
+        woodsman: 2000,
+        dark_horse: 2000
       })
     })
   ],

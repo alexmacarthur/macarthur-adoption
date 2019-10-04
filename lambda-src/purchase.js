@@ -97,6 +97,7 @@ exports.handler = async function(event) {
   }
 
   let charge;
+  let chargeDescription = `Coffee purchase ${data.should_ship ? "(with shipping) " : ""}from ${data.name}`
 
   try {
     charge = await stripe.charges.create({
@@ -104,7 +105,7 @@ exports.handler = async function(event) {
       currency: 'usd',
       source: data.token.id,
       receipt_email: data.email,
-      description: `Coffee fundraiser purchase from ${data.name}`,
+      description: chargeDescription,
       metadata
     }, {
       idempotency_key: data.idempotency_key
@@ -121,8 +122,6 @@ exports.handler = async function(event) {
   }
 
   let airTableData = formatForAirtable(metadata);
-
-  console.log(airTableData);
 
   try {
     let airtablePromise = saveToAirtable(airTableData);

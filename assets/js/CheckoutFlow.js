@@ -70,7 +70,7 @@ export default class {
     let orderData = this.getOrderData(formData);
     let additionalDonationValue =
       document.getElementById("additional_donation").value * 100;
-    let shippingValue = formData.should_ship ? 500 : 0;
+    let shippingValue = formData.should_ship ? 800 : 0;
     return orderData.total + additionalDonationValue + shippingValue;
   }
 
@@ -213,7 +213,7 @@ export default class {
         if (response.data === "succeeded") {
           this.setAlert({
             message:
-              "Payment successful. We'll let you know when your order is ready!",
+              "Payment successful. We'll let you know when your order is ready within a few weeks!",
             isBad: false,
             nuke: true
           });

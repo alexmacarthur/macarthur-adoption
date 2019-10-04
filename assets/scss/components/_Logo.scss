@@ -4,6 +4,7 @@
   white-space: nowrap;
   font-size: $medium-font-size;
   font-family: $serif-font-family;
+  color: $purple;
   margin: 0;
 
   @include media($tablet) {
